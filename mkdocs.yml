@@ -1,0 +1,125 @@
+site_name: OmicsDM Warehouse Documentation
+site_description: Comprehensive guide to the OmicsDM data management warehouse.
+site_author: OmicsDM Team
+copyright: '&copy; Ivo C. Leist, CNAG'
+repo_name: 'omicsdm-documentation'
+repo_url: https://github.com/mrueda/omicsdm-documentation
+edit_uri: edit/main/docs/
+
+extra_css: 
+  - css/theme_overrides.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+extra_javascript:
+  - js/theme_overrides.js
+  - js/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+
+plugins:
+  - search
+  - macros
+  - mermaid2:
+      arguments:
+        startOnLoad: true
+
+markdown_extensions:
+    - toc:
+        toc_depth: 2-3
+        permalink: true
+    - admonition
+    - attr_list
+    - footnotes
+    - md_in_html
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.details
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.saneheaders
+    - pymdownx.magiclink:
+        hide_protocol: true
+    - pymdownx.tabbed:
+        alternate_style: true
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - tables
+    - mdx_gh_links:
+        user: CNAG-Biomedical-Informatics
+        repo: omicsdm-documentation
+    - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.highlight:
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets:
+        base_path: docs
+        url_download: true
+    - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:mermaid2.fence_mermaid
+    - pymdownx.arithmatex:
+        generic: true
+
+# Navigation
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Overview: getting-started/overview.md
+      - Installation: getting-started/installation.md
+      - Quick Start Guide: getting-started/quick-start.md
+  - User Guide:
+      - Introduction: user-guide/introduction.md
+      - Data Management: user-guide/data-management.md
+      - Queries and Reports: user-guide/queries-reports.md
+      - Integrations: user-guide/integrations.md
+  - Developer Guide:
+      - API Overview: developer-guide/api-overview.md
+      - Configuration: developer-guide/configuration.md
+      - Deployment: developer-guide/deployment.md
+  - FAQ: faq.md
+  - About: about.md
+
+theme:
+  name: material
+  #custom_dir: overrides
+  palette:
+  - media: '(prefers-color-scheme: dark)'
+    scheme: default
+    primary: blue grey
+    accent: amber
+    toggle:
+      icon: material/lightbulb
+      name: Switch to light mode
+  - media: '(prefers-color-scheme: light)'
+    scheme: slate
+    primary: blue grey
+    accent: amber
+    toggle:
+      icon: material/lightbulb-outline
+      name: Switch to dark mode
+  logo: img/iconhex.svg
+  favicon: img/favicon-2x.png
+  icon:
+      repo: fontawesome/brands/github-alt 
+  features:
+        - content.code.select
+        - content.code.copy
+        - content.tabs.link
+        - search.highlight
+        - search.share
+        # - navigation.instant # otherwise blocks rendering of mermaid on page load
+        - navigation.tracking
+        - navigation.sections
+        - toc.integrate
+
+# Options
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/ileist
