@@ -5,11 +5,11 @@
 
 ## 3TR project data
 
-!!! Info "Important terminology"
-    | Data source | Description |
-    | --- | --- |
-    | Legacy | Data collected in clinical trials before the start of the 3TR project |
-    | Collected during 3TR | Data generated during the 3TR project |
+!!! Info "Important terminology and its implications"
+    | Data source | Description | Dataset Visibility Defaults | Extra Data Policy File |
+    | --- | --- | -- | -- |
+    | Legacy | Data collected in clinical trials before the start of the 3TR project | Private; Visibility not changeable | Optional |
+    | Collected during 3TR | Data generated during the 3TR project | Visible to all; Visibility changeable | Not allowed |
 
 ### Molecular data
 

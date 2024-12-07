@@ -37,6 +37,9 @@ fill it out and attach it to the email.
     - Handy when you want to ask for the creation of multiple projects
     - Makes the life more easy for the admin creating the project(s).
 
+!!! Info "3TR specific"
+    For 
+
 ### Step 2: Create dataset(s)
 
 !!! Info "3TR specific"
@@ -52,8 +55,10 @@ When the project is created, you can start creating datasets (the "folder" for y
 
 2. Create the dataset(s):
     1. Fill out the table on the page manually or by uploading a filled out [dataset_template](https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation/blob/main/omicsdm_templates/project_template.tsv)
-    2. Click on "VALIDATE" to check if all mandatory fields are filled out
-    3. Click on "SUBMIT" to create the dataset(s)
+    2. Click on "Browse" in the "Clinical File" column to select the corresponding pheno-clinical information file to be uploaded
+    3. Optional: Click on "Browse" in the "Data Usage Policy File" column to upload a file containing specific data usage policy
+    4. Click on "VALIDATE" to check if all mandatory fields are filled out
+    5. Click on "SUBMIT" to create the dataset(s)
 
     !!! Info "Why use the dataset creation template?" 
         Handy when you want to create multiple datasets
@@ -64,7 +69,7 @@ When the project is created, you can start creating datasets (the "folder" for y
 
 !!! Info "3TR specific"
     Here is the link to directly navigate to the file upload page:  
-    https://3tr.gpap.cnag.eu/portal/#/submitfiles
+    [3tr.gpap.cnag.eu/portal/#/submitfiles](https://3tr.gpap.cnag.eu/portal/#/submitfiles)
 
 1. Navigate to the file upload page:
     1. Click on "DATA SUBMISSION" in the navigation bar on the left
