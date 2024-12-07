@@ -70,14 +70,15 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Concepts:
-    - 3-tier Data Organisation: content/concepts/3-tier-data-organisation.md
     - Group-based Access Control: content/concepts/group-based-access-control.md
+    - 3-tier Data Organisation: content/concepts/3-tier-data-organisation.md
   - User Guide:
     - Introduction: content/user-guide/introduction.md
     - Access Request (3TR partners): content/user-guide/access-request-3tr.md
     - Data Submission: content/user-guide/data-submission.md
     - Data Sharing: content/user-guide/data-sharing.md
     - Data Download: content/user-guide/data-download.md
+    - FAQ: content/user-guide/faq.md
   - Administrator Guide:
     - Overview: content/admin-guide/overview.md
     - User Management: content/admin-guide/user-management.md
@@ -87,7 +88,6 @@ nav:
     - Quickstart: content/developer-guide/quickstart.md
     - API Overview: content/developer-guide/api-overview.md
     - SQL Tables: content/developer-guide/sql-tables.md
-    - Configuration: content/developer-guide/configuration.md
     - Automated Testing: content/developer-guide/automated-testing.md
   - Sysadministrator Guide:
     - Dependencies: content/sysadmin-guide/dependencies.md
