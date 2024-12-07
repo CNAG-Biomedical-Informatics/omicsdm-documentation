@@ -13,7 +13,7 @@ and its patient's pheno-clinical information.
 The 3TR consortium is a public-private partnership...
 
 In case you are interested more 3TR specific peculiarities:
-[3TR specific information](content/3tr-specific-information.md).
+[3TR specific information](../3tr-specific-info).
 
 ## CNAG
 
