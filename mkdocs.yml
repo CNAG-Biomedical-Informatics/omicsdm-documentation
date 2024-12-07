@@ -82,8 +82,8 @@ nav:
   - Administrator Guide:
     - Overview: content/admin-guide/overview.md
     - User Management: content/admin-guide/user-management.md
-    - Project creation: content/admin-guide/project-creation.md
-    - Data management: content/admin-guide/data-management.md
+    - Data Management: content/admin-guide/data-management.md
+    - Analyses Pipelines Management: content/admin-guide/analyses-pipelines-management.md
   - Developer Guide:
     - Quickstart: content/developer-guide/quickstart.md
     - API Overview: content/developer-guide/api-overview.md
@@ -93,8 +93,8 @@ nav:
     - Dependencies: content/sysadmin-guide/dependencies.md
     - Configuration: content/sysadmin-guide/configuration.md
     - Deployment: content/sysadmin-guide/deployment.md
-  - FAQ: content/faq.md
   - About: content/about.md
+  - 3TR-specific: content/3tr-specific-info.md
 
 theme: 
   name: material
