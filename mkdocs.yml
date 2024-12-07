@@ -1,9 +1,9 @@
-site_name: OmicsDM Warehouse Documentation
+site_name: OmicsDM Data Warehouse Documentation
 site_description: Comprehensive guide to the OmicsDM data management warehouse.
 site_author: OmicsDM Team
 copyright: '&copy; Ivo C. Leist, CNAG'
 repo_name: 'omicsdm-documentation'
-repo_url: https://github.com/mrueda/omicsdm-documentation
+repo_url: https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation
 edit_uri: edit/main/docs/
 
 extra_css: 
@@ -69,23 +69,34 @@ markdown_extensions:
 # Navigation
 nav:
   - Home: index.md
-  - Getting Started:
-      - Overview: getting-started/overview.md
-      - Installation: getting-started/installation.md
-      - Quick Start Guide: getting-started/quick-start.md
+  - Concepts:
+    - 3-tier Data Organisation: content/concepts/3-tier-data-organisation.md
+    - Group-based Access Control: content/concepts/group-based-access-control.md
   - User Guide:
-      - Introduction: user-guide/introduction.md
-      - Data Management: user-guide/data-management.md
-      - Queries and Reports: user-guide/queries-reports.md
-      - Integrations: user-guide/integrations.md
+    - Introduction: content/user-guide/introduction.md
+    - Access Request (3TR partners): content/user-guide/access-request-3tr.md
+    - Data Submission: content/user-guide/data-submission.md
+    - Data Sharing: content/user-guide/data-sharing.md
+    - Data Download: content/user-guide/data-download.md
+  - Administrator Guide:
+    - Overview: content/admin-guide/overview.md
+    - User Management: content/admin-guide/user-management.md
+    - Project creation: content/admin-guide/project-creation.md
+    - Data management: content/admin-guide/data-management.md
   - Developer Guide:
-      - API Overview: developer-guide/api-overview.md
-      - Configuration: developer-guide/configuration.md
-      - Deployment: developer-guide/deployment.md
-  - FAQ: faq.md
-  - About: about.md
+    - Quickstart: content/developer-guide/quickstart.md
+    - API Overview: content/developer-guide/api-overview.md
+    - SQL Tables: content/developer-guide/sql-tables.md
+    - Configuration: content/developer-guide/configuration.md
+    - Automated Testing: content/developer-guide/automated-testing.md
+  - Sysadministrator Guide:
+    - Dependencies: content/sysadmin-guide/dependencies.md
+    - Configuration: content/sysadmin-guide/configuration.md
+    - Deployment: content/sysadmin-guide/deployment.md
+  - FAQ: content/faq.md
+  - About: content/about.md
 
-theme:
+theme: 
   name: material
   #custom_dir: overrides
   palette:
@@ -103,23 +114,23 @@ theme:
     toggle:
       icon: material/lightbulb-outline
       name: Switch to dark mode
-  logo: img/iconhex.svg
-  favicon: img/favicon-2x.png
+  # logo: img/iconhex.svg
+  # favicon: img/favicon-2x.png
   icon:
-      repo: fontawesome/brands/github-alt 
+    repo: fontawesome/brands/github-alt 
   features:
-        - content.code.select
-        - content.code.copy
-        - content.tabs.link
-        - search.highlight
-        - search.share
-        # - navigation.instant # otherwise blocks rendering of mermaid on page load
-        - navigation.tracking
-        - navigation.sections
-        - toc.integrate
+    - content.code.select
+    - content.code.copy
+    - content.tabs.link
+    - search.highlight
+    - search.share
+    # - navigation.instant # otherwise blocks rendering of mermaid on page load
+    - navigation.tracking
+    - navigation.sections
+    - toc.integrate
 
 # Options
 extra:
   social:
     - icon: fontawesome/brands/github 
-      link: https://github.com/ileist
+      link: https://github.com/IvoLeist
