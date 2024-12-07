@@ -74,7 +74,7 @@ nav:
     - 3-tier Data Organisation: content/concepts/3-tier-data-organisation.md
   - User Guide:
     - Introduction: content/user-guide/introduction.md
-    - Access Request (3TR partners): content/user-guide/access-request-3tr.md
+    - Get Access (3TR partners only): content/user-guide/get-access-3tr.md
     - Data Submission: content/user-guide/data-submission.md
     - Data Sharing: content/user-guide/data-sharing.md
     - Data Download: content/user-guide/data-download.md

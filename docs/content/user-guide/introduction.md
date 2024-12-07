@@ -2,28 +2,23 @@
 
 ## General
 
-The Data warehouse solution OmicsDM is a web-based application that allows the storage and sharing of all kind of data.
+The Data warehouse solution OmicsDM is a web-based application that not only 
+allows the storage and sharing of data but also provides functionalities to 
+start data visualisation instances such as [CELLxGENE Annotate](https://chanzuckerberg.github.io/cellxgene/){target="_blank"}
+and run analyses directly in the data warehouse.
+
 Click on the links below to learn how to:
 
-- [Submit data](user-guide/submit-data)
-- [Share data](user-guide/share-data)
-- [Download data](user-guide/download-data)
+- [Submit data](../data-submission)
+- [Share data](../data-sharing)
+- [Download data](../data-download)
+- [Visualise single-cell data](../data-visualisation)
+- [Run analyses](/data-analyses)
 
 ## 3TR specific
 
+!!! Warning "Data visualisation and analyses are not enabled in 3TR's data warehouse"
+
 The for the 3TR partners hosted OmicsDM data warehouse solution is available at 
 [3tr.gpap.cnag.eu/portal](https://3tr.gpap.cnag.eu/portal).
-How to get access to the system is described in the [User Guide](user-guide/access).
-
-In the context of the 3TR project, there are two main types of data that are stored in OmicsDM.
-Processed omics data and patient's pheno-clinical information.
-
-### Processed omics data
-
-!!! Warning "The data warehouse is not a storage for your raw data"
-    Please do not see our data warehouse as a storage for your raw data.
-    Only upload processed data that is ready for analyses.
-
-### Patient's pheno-clinical information
-
-The patient's pheno-clinical information is stored in the data warehouse to allow the linking of the omics data to the patient's clinical information.
+How to get access to the system is described in the [Get Access](../user-guide/get-access-3tr.md).

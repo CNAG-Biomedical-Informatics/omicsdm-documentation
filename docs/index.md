@@ -1,6 +1,6 @@
 # Home
 
-The documentation for the OmicsDM data warehouse solution built for the [3TR project](https://www.3tr-imi.eu)
+The documentation for the OmicsDM data warehouse solution built for the [3TR project](https://www.3tr-imi.eu){target="_blank"}
 
 !!! Info "For anyone interested in the OmicsDM data warehouse solution but not part of the 3TR consortium:"
     You can find more context about the 3TR project in the [About](../about) section.
