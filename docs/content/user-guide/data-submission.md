@@ -89,7 +89,7 @@ When the project is created, you can start creating datasets (the "folder" for y
     Handy when you want to upload multiple files to different datasets
 
 !!! Info "FAQ"
-    {% include-markdown "content/user-guide/faq.md" start="## File upload"  %}
+    {% include-markdown "content/user-guide/faq.md" start="## File upload" end="## File download" %}
 
 !!! Warning "3TR specific"
     Please do not see our data warehouse as a storage for your raw data.

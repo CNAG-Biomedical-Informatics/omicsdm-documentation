@@ -80,7 +80,7 @@ nav:
     - Get Access (3TR partners only): content/user-guide/get-access-3tr.md
     - Data Submission: content/user-guide/data-submission.md
     - Data Sharing: content/user-guide/data-sharing.md
-    - Data Download: content/user-guide/data-download.md
+    - File Download: content/user-guide/file-download.md
     - FAQ: content/user-guide/faq.md
   - Administrator Guide:
     - Overview: content/admin-guide/overview.md

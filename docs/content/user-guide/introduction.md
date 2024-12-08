@@ -4,14 +4,14 @@
 
 The Data warehouse solution OmicsDM is a web-based application that not only 
 allows the storage and sharing of data but also provides functionalities to 
-start data visualisation instances such as [CELLxGENE Annotate](https://chanzuckerberg.github.io/cellxgene/){target="_blank"}
+start data visualisation instances such as [CELLxGENE Annotate](https://github.com/chanzuckerberg/cellxgene){target="_blank"}
 and run analyses directly in the data warehouse.
 
 Click on the links below to learn how to:
 
 - [Submit data](../data-submission)
 - [Share data](../data-sharing)
-- [Download data](../data-download)
+- [Download files](../file-download)
 - [Visualise single-cell data](../data-visualisation)
 - [Run analyses](/data-analyses)
 

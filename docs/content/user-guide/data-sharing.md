@@ -9,7 +9,7 @@
     - Here a group is an institute/company
     - Here "visible to all" means accessible to all members of the consortium
 
-Steps to (un)share data with a group:
+## Steps to (un)share data with a group:
 
 !!! Info "3TR specific"
     Here is the link to the page showing all accessible datasets:
