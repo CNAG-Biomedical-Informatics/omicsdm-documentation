@@ -4,21 +4,6 @@
 
 <div class="grid cards" markdown>
 
--   
-    File storage is not ideal for large file uploads due to its inherent scalability limitations.
-    Object storage on the other hand is a more cost-efficient and scalable solution for large datasets.
-
-
-    | Feature                 | **File Storage**              | **Object Storage**           |
-    |-------------------------|-------------------------------|------------------------------|
-    | **Organization**        | Hierarchical (folders) | Flat namespace (keys)               |
-    | **Metadata**            | Basic (File properties)      | Extensive and customizable    |
-    | **Access Method**       | File paths (e.g., NFS, SMB)  | APIs (e.g., REST, S3)         |
-    | **Mutability**          | Overwrites, appends          | Immutable                     |
-    | **Use Case**            | Real-time applications       | Large datasets                |
-    | **Scalability**         | Vertical (Upgrade of existing hardware) | Horizontal (Addition of nodes)|
-    | **Cost**                | Higher for scaling           | Cost-efficient at scale       |
-
 - <figure markdown>
     ![ShinyProxy](../../img/file_vs_object_storage.png){ width="100%" }
     <figcaption>
@@ -31,6 +16,19 @@
       </span>
     </figcaption>
   </figure>
+
+
+- | Feature                 | **File Storage**              | **Object Storage**           |
+  |-------------------------|-------------------------------|------------------------------|
+  | **Location**            | Typically centralized         | Inherently distributed                  |
+  | **Organization**        | Hierarchical (folders) | Flat namespace (buckets/keys)               |
+  | **Metadata**            | Basic (File properties)      | Extensive and customizable    |
+  | **Access Method**       | File paths (e.g., NFS, SMB)  | HTTP/HTTPS-based APIs (e.g., REST, S3)         |
+  | **Mutability**          | Overwrite, appends          | Objects are replaced as a whole                    |
+  | **Use Case**            | Real-time applications       | Large datasets                |
+  | **Scalability**         | Vertical (Upgrade existing hardware) | Horizontal (Addition of nodes)|
+  | **Cost**                | Scaling can be expensive | Cost-efficient at scale       |
+
 </div>
 
 ## Object Storage with MinIO
@@ -38,6 +36,8 @@
 The OmicsDM data warehouse solution employs [MinIO](https://min.io), 
 a S3-compatible distribute object storage system, to store all uploaded files,
 in a so-called S3 bucket. 
+
+https://min.io/cohasset/introduction
 
 ## File Upload Driven by EvaporateJS
 
