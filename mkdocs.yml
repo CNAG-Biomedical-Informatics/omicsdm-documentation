@@ -18,9 +18,11 @@ extra_javascript:
 plugins:
   - search
   - macros
+  - include-markdown
   - mermaid2:
       arguments:
         startOnLoad: true
+  
 
 markdown_extensions:
     - toc:
