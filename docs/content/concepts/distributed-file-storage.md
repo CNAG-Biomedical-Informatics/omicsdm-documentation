@@ -10,10 +10,27 @@ The file upload is driven by [EvaporateJS](https://github.com/TTLabs/EvaporateJS
 a JavaScript library that allows for large file uploads
 directly from the browser to the S3 bucket.
 
-## File Download leveraging S3 pre-signed URLs
+## File Download leveraging presigned URLs
 
 For each file selected to be downloaded, the user receives a unique download link,
-a so-called pre-signed URL. 
+a so-called presigned URL. 
+
+```mermaid
+    %%{init: {'theme': 'dark'}}%%
+    sequenceDiagram
+        participant User
+        participant omicsdm_client as OmicsDM Client
+        participant omicsdm_server as OmicsDM Server
+        participant S3 as S3 Bucket
+
+        User->>omicsdm_client: File Request
+        omicsdm_client->>omicsdm_server: Forward File Request
+        omicsdm_server->>S3: API Call
+        S3->>omicsdm_server: Create Time-bound Presigned URL
+        omicsdm_server->>omicsdm_client: Return Presigned URL
+        omicsdm_client->>User: Present Presigned URL
+        User->>S3: Download File using Presigned URL
+```
 
 ## Automatic File Versioning
 
