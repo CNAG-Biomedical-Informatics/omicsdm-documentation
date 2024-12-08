@@ -63,6 +63,9 @@ When the project is created, you can start creating datasets (the "folder" for y
     !!! Info "Why use the dataset creation template?" 
         Handy when you want to create multiple datasets
 
+    !!! Info "FAQ"
+        {% include-markdown "content/user-guide/faq.md" start="## Dataset creation" end="## File upload" %}
+
 ### Step 3: Upload file(s)
 !!! Info "Good to know"
     - You can upload multiple files at once

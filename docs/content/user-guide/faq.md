@@ -2,6 +2,15 @@
 
 ## General
 
+## Dataset creation
+
+??? faq "I accidentally filled some fields wrong, can I correct them?"
+    
+    No, you cannot correct the fields after the dataset has been created. 
+    Please contact the helpdesk to explain the situation so the admin can correct the fields for you.
+
+    ##### last change 2024-12-08 by Ivo Leist [:fontawesome-brands-github:](https://github.com/IvoLeist)
+
 ## File upload
 
 ??? faq "Does the upload start immediately as soon I have selected a file?"
