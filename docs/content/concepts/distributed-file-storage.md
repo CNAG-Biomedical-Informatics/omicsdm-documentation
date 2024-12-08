@@ -35,9 +35,21 @@
 
 The OmicsDM data warehouse solution employs [MinIO](https://min.io), 
 a S3-compatible distribute object storage system, to store all uploaded files,
-in a so-called S3 bucket. 
+in a so-called S3 bucket. Below is a conceptual overview. For the sake of simplicity,
+the OmicsDM client is not shown in the diagram.
 
-https://min.io/cohasset/introduction
+<div class="grid cards" markdown>
+
+- ![S3 conceptual overview](../../drawio/s3.drawio)
+
+- | Step                   | **Description**              | 
+  |-------------------------|------------------------------|
+| **1. Get Pre-Signed URL** | Users send a request to the application server to obtain a pre-signed URL for uploading or downloading files. |
+| **2. API Call to MinIO Server** | The application server requests the generation of a pre-signed URL for a specific file operation (upload or download) in the S3 bucket. |
+| **3. Pre-Signed URL Generation** | The MinIO server creates a pre-signed URL, which contains time-limited credentials and permissions to perform the requested file operation. This URL is sent back to the application server. |
+| **4. File Upload/Download** | The application server provides the pre-signed URL to the user. The user can then use this URL to directly upload files to or download files from the S3 bucket |
+
+</div>
 
 ## File Upload Driven by EvaporateJS
 
