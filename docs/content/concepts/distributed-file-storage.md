@@ -16,7 +16,6 @@ For each file selected to be downloaded, the user receives a unique download lin
 a so-called presigned URL. 
 
 ```mermaid
-    %%{init: {'theme': 'dark'}}%%
     sequenceDiagram
         participant User
         participant omicsdm_client as OmicsDM Client
