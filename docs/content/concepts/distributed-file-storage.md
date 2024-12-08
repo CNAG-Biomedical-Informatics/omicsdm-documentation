@@ -10,6 +10,25 @@ The file upload is driven by [EvaporateJS](https://github.com/TTLabs/EvaporateJS
 a JavaScript library that allows for large file uploads
 directly from the browser to the S3 bucket.
 
+```mermaid
+    sequenceDiagram
+        participant User
+        participant client as OmicsDM Client (with EvaporateJS)
+        participant signer_server as OmicsDM Server
+        participant S3 as S3 Bucket
+
+        User->>client: Upload File Request
+        loop Until All Chunks Uploaded
+            client->>signer_server: Request Signed Policy for Next Chunk
+            signer_server->>client: Return Signed Policy
+            client->>S3: Upload Next Chunk
+            S3->>client: Confirm Chunk Upload Success
+        end
+        client->>S3: Complete Multipart Upload
+        S3->>client: Confirm Multipart Upload Success
+        client->>User: Notify Upload Complete
+```
+
 ## File Download leveraging presigned URLs
 
 For each file selected to be downloaded, the user receives a unique download link,
