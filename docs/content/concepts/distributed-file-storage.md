@@ -7,47 +7,26 @@ in a so-called S3 bucket.
 ## File Upload Driven by EvaporateJS
 
 The file upload is driven by [EvaporateJS](https://github.com/TTLabs/EvaporateJS) 
-a JavaScript library that allows for large file uploads
+a JavaScript library that allows for large file uploads (in chunks)
 directly from the browser to the S3 bucket.
 
 ```mermaid
-    sequenceDiagram
-        participant User
-        participant client as OmicsDM Client (with EvaporateJS)
-        participant signer_server as OmicsDM Server
-        participant S3 as S3 Bucket
+sequenceDiagram
+    participant User
+    participant client as OmicsDM Client (with EvaporateJS)
+    participant signer_server as OmicsDM Server
+    participant S3 as S3 Bucket
 
-        User->>client: Upload File Request
-        loop Until All Chunks Uploaded
-            client->>signer_server: Request Signed Policy for Next Chunk
-            signer_server->>client: Return Signed Policy
-            client->>S3: Upload Next Chunk
-            S3->>client: Confirm Chunk Upload Success
-        end
-        client->>S3: Complete Multipart Upload
-        S3->>client: Confirm Multipart Upload Success
-        client->>User: Notify Upload Complete
-```
-
-## File Download leveraging presigned URLs
-
-For each file selected to be downloaded, the user receives a unique download link,
-a so-called presigned URL. 
-
-```mermaid
-    sequenceDiagram
-        participant User
-        participant omicsdm_client as OmicsDM Client
-        participant omicsdm_server as OmicsDM Server
-        participant S3 as S3 Bucket
-
-        User->>omicsdm_client: File Request
-        omicsdm_client->>omicsdm_server: Forward File Request
-        omicsdm_server->>S3: API Call
-        S3->>omicsdm_server: Create Time-bound Presigned URL
-        omicsdm_server->>omicsdm_client: Return Presigned URL
-        omicsdm_client->>User: Present Presigned URL
-        User->>S3: Download File using Presigned URL
+    User->>client: Upload File Request
+    loop Until All Chunks Uploaded
+        client->>signer_server: Request Signed Policy for Next Chunk
+        signer_server->>client: Return Signed Policy
+        client->>S3: Upload Next Chunk
+        S3->>client: Confirm Chunk Upload Success
+    end
+    client->>S3: Complete Multipart Upload
+    S3->>client: Confirm Multipart Upload Success
+    client->>User: Notify Upload Complete
 ```
 
 ## Automatic File Versioning
@@ -56,6 +35,43 @@ The OmicsDM data warehouse solution comes with automatic file versioning:
 
 A re-upload of a file with the same name will not overwrite the existing file on the S3 bucket
 but create a new version of it.
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant client as OmicsDM Client
+    participant server as OmicsDM Server
+    participant S3 as S3 Bucket
+
+    User->>client: Upload File Request
+    client->>server: Check for Existing File
+    server->>client: Return filename including the new version number
+    client->>S3: Upload file using EvaporateJS
+    S3->>client: Confirm Upload Success
+    client->>server: Notify file upload success
+    client->>User: Notify Upload Complete
+```
+
+## File Download leveraging presigned URLs
+
+For each file selected to be downloaded, the user receives a unique download link,
+a so-called presigned URL. 
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant client as OmicsDM Client
+    participant server as OmicsDM Server
+    participant S3 as S3 Bucket
+
+    User->>client: File Request
+    client->>server: Forward File Request
+    server->>S3: API Call
+    S3->>server: Create Time-bound Presigned URL
+    server->>client: Return Presigned URL
+    client->>User: Present Presigned URL
+    User->>S3: Download File using Presigned URL
+```
 
 ## File deletion
 
