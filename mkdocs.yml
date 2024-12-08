@@ -75,6 +75,7 @@ nav:
     - Group-based Access Control: content/concepts/group-based-access-control.md
     - 3-tier Data Organisation: content/concepts/3-tier-data-organisation.md
     - Distributed File Storage: content/concepts/distributed-file-storage.md
+    - Container Orchestration: content/concepts/docker-container-orchestration.md
   - User Guide:
     - Introduction: content/user-guide/introduction.md
     - Get Access (3TR partners only): content/user-guide/get-access-3tr.md
