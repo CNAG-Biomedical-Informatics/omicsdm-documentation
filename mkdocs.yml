@@ -81,6 +81,8 @@ nav:
     - Data Submission: content/user-guide/data-submission.md
     - Data Sharing: content/user-guide/data-sharing.md
     - File Download: content/user-guide/file-download.md
+    - Data Visualisation: content/user-guide/data-visualisation.md
+    - Run Analyses Pipelines: content/user-guide/data-analyses.md
     - FAQ: content/user-guide/faq.md
   - Administrator Guide:
     - Overview: content/admin-guide/overview.md
