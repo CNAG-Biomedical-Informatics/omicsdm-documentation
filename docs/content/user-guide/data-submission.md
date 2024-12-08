@@ -91,6 +91,9 @@ When the project is created, you can start creating datasets (the "folder" for y
     ---
     - Q: Can I pause the upload process and resume later?
     - A: No, the upload process is not resumable. If you e.g. close the browser tab, the upload process is interrupted and you have to start over.
+    ---
+    - Q: After uploading I realised that there is a mistake in the file. Can I correct it?
+    - A: Just upload file
 
 !!! Warning "3TR specific"
     Please do not see our data warehouse as a storage for your raw data.

@@ -10,6 +10,7 @@ OmicsDM's hallmark features (click on the links to learn more):
 - [Group-based data sharing](content/concepts/group-based-access-control)
 - [Uncomplicated organization of data](content/concepts/3-tier-data-organization)
 - [Large file upload via a web interface](content/user-guide/submit-data)
+- [File versioning](content/concepts/distributed-file-storage/#file-versioning)
 - [Provision of private data visualisation environments per user](content/user-guide/data-visualisation)
 - [Running analyses directly in the data warehouse](content/user-guide/data-analyses)
 - [Functionalities are split into modules](content/concepts/modules)
