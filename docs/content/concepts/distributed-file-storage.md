@@ -2,7 +2,7 @@
 
 The OmicsDM data warehouse solution employs [MinIO](https://min.io), 
 a S3-compatible object storage server, to store all uploaded files,
-in a so-called S3 bucket.
+in a so-called S3 bucket. 
 
 ## File Upload Driven by EvaporateJS
 
@@ -30,4 +30,4 @@ This switches a boolean flag in the database, preventing
 
 (a) The file from being shown in the files overview
 
-(b) The generation of a pre-signed URL for the download of the respective file.
+(b) The generation of a pre-signed URL for the download of the respective file
