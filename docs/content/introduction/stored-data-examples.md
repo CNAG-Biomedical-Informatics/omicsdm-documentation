@@ -40,7 +40,7 @@ In the python ecosystem one of the most used tool for single-cell RNA-seq data a
 for storing annotated data matrices, which can be saved to disk in the form of a `.h5ad` file.
 
 Thus, you find below a `.h5ad` example, which not only can be stored in OmicsDM but also be explored 
-using OmicsDM's [visualisation module]().
+using OmicsDM's [visualisation module](./functionalities-organized-in-modules.md/#data-visualisation).
 
 - [scRNA-seq example](https://github.com/chanzuckerberg/cellxgene/tree/main/example-dataset){target="_blank"}
 
