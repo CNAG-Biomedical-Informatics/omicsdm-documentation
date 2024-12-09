@@ -13,6 +13,7 @@ extra_css:
 extra_javascript:
   - js/theme_overrides.js
   - js/refresh_on_toggle_dark_light.js
+  - js/auto_expand_user_guide.js
   - js/katex.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
