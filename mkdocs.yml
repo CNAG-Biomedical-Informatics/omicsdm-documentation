@@ -80,34 +80,36 @@ markdown_extensions:
 # Navigation
 nav:
   - Home: index.md
-  - Concepts:
+  - Guides:
+    - User Guide:
+      - Introduction: content/user-guide/introduction.md
+      - Get Access (3TR partners only): content/user-guide/get-access-3tr.md
+      - Data Submission: content/user-guide/data-submission/index.md
+      - Data Sharing: content/user-guide/data-sharing.md
+      - File Download: content/user-guide/file-download.md
+      - Data Visualisation: content/user-guide/data-visualisation.md
+      - Run Analyses Pipelines: content/user-guide/data-analyses.md
+      - FAQ: content/user-guide/faq.md
+    - Administrator Guide:
+      - Overview: content/admin-guide/overview.md
+      - User Management: content/admin-guide/user-management.md
+      - Data Management: content/admin-guide/data-management.md
+      - Analyses Pipelines Management: content/admin-guide/analyses-pipelines-management.md
+    - Developer Guide:
+      - Quickstart: content/developer-guide/quickstart.md
+      - Configuration: content/developer-guide/configuration.md
+      - API Overview: content/developer-guide/api-overview.md
+      - SQL Tables: content/developer-guide/sql-tables.md
+      - Automated Testing: content/developer-guide/automated-testing.md
+    - Sysadministrator Guide:
+      - Configuration: content/sysadmin-guide/configuration.md
+      - Dependencies: content/sysadmin-guide/dependencies.md
+      - Deployment: content/sysadmin-guide/deployment.md
+  - Underlying Concepts:
     - Group-based Access Control: content/concepts/group-based-access-control.md
     - 3-tier Data Organisation: content/concepts/3-tier-data-organisation.md
     - Distributed File Storage: content/concepts/distributed-file-storage.md
     - Container Orchestration: content/concepts/docker-container-orchestration.md
-  - User Guide:
-    - Introduction: content/user-guide/introduction.md
-    - Get Access (3TR partners only): content/user-guide/get-access-3tr.md
-    - Data Submission: content/user-guide/data-submission.md
-    - Data Sharing: content/user-guide/data-sharing.md
-    - File Download: content/user-guide/file-download.md
-    - Data Visualisation: content/user-guide/data-visualisation.md
-    - Run Analyses Pipelines: content/user-guide/data-analyses.md
-    - FAQ: content/user-guide/faq.md
-  - Administrator Guide:
-    - Overview: content/admin-guide/overview.md
-    - User Management: content/admin-guide/user-management.md
-    - Data Management: content/admin-guide/data-management.md
-    - Analyses Pipelines Management: content/admin-guide/analyses-pipelines-management.md
-  - Developer Guide:
-    - Quickstart: content/developer-guide/quickstart.md
-    - Configuration: content/developer-guide/configuration.md
-    - API Overview: content/developer-guide/api-overview.md
-    - SQL Tables: content/developer-guide/sql-tables.md
-    - Automated Testing: content/developer-guide/automated-testing.md
-  - Sysadministrator Guide:
-    - Dependencies: content/sysadmin-guide/dependencies.md
-    - Deployment: content/sysadmin-guide/deployment.md
   - About: content/about.md
   - 3TR-specific: content/3tr-specific-info.md
 

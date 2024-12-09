@@ -1,4 +1,3 @@
-# Data Submission
 
 ## Steps
 
