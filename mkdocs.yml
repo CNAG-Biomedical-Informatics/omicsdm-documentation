@@ -8,6 +8,7 @@ edit_uri: edit/main/docs/
 
 extra_css: 
   - css/theme_overrides.css
+  - css/neoteroi-mkdocs.css
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
 extra_javascript:
   - js/theme_overrides.js
@@ -65,6 +66,7 @@ markdown_extensions:
       url_download: true
   - pymdownx.arithmatex:
       generic: true
+  - neoteroi.cards
 
 # Navigation
 nav:
