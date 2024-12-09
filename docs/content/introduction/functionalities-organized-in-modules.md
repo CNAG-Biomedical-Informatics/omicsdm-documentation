@@ -17,13 +17,15 @@ It provides the basic functionalities to store, share, and manage data.
 
 ## Data Visualisation
 
-The data visualisation module is leveraging [ShinyProxy](https://www.shinyproxy.io) 
+The data visualisation module is leveraging [ShinyProxy](https://www.shinyproxy.io){target="_blank"} 
 to provide private data visualisation environments per user.
 As a proof of concept, the module is providing a 
-[CELLxGENE annotate](https://github.com/chanzuckerberg/cellxgene) instance.
+[CELLxGENE annotate](https://github.com/chanzuckerberg/cellxgene){target="_blank"} instance.
 
 ## Data Analyses
 
 The Data Analyses module provides the functionalities to run analyses directly in the OmicsDM data warehouse.
-It is employing Celery to manage the job execution and the actual analyses pipelines can be implemented
-either in Snakemake or Nextflow.
+It is employing [Celery](https://docs.celeryq.dev/en/stable/index.html){target="_blank"} to manage the job execution 
+and the actual analyses pipelines can be implemented
+either in [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html){target="_blank"} 
+or [Nextflow](https://www.nextflow.io/docs/latest/index.html){target="_blank"}.
