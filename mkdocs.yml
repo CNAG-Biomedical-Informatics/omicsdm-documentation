@@ -81,6 +81,9 @@ markdown_extensions:
 # Navigation
 nav:
   - Home: index.md
+  - Introduction:
+    - What is OmicsDM?: content/introduction/what-is-omicsdm.md
+    - Data to be stored: content/introduction/data-to-be-stored.md
   - Guides:
     - User Guide:
       - Introduction: content/user-guide/introduction.md

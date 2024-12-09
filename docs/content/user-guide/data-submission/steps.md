@@ -3,9 +3,9 @@
 
 Data submission in OmicsDM is a three-step process:
 
-- [Request project(s) creation](#step-1-request-projects-creation)
-- [Create dataset(s)](#step-2-create-datasets)
-- [Upload file(s)](#step-3-upload-files)
+- [Request project(s) creation](#step-1-request-projects-creation): Project creation is done by the OmicsDM admin
+- [Create dataset(s)](#step-2-create-datasets): Here you create the "folder" for your files + attach the pheno-clinical data
+- [Upload file(s)](#step-3-upload-files): Here you can upload your molecular data files such as RNA-seq count matrices
 
 !!! Info "Good to know"
     The information required by each of the steps can be prefilled
@@ -35,9 +35,6 @@ fill it out and attach it to the email.
 !!! Info "Why use the project creation template?" 
     - Handy when you want to ask for the creation of multiple projects
     - Makes the life more easy for the admin creating the project(s).
-
-!!! Info "3TR specific"
-    For 
 
 ### Step 2: Create dataset(s)
 
