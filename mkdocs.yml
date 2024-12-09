@@ -28,6 +28,10 @@ plugins:
         startOnLoad: true
         theme: |
           ^(JSON.parse(__md_get("__palette").index == 1)) ? 'dark' : 'light'
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [docs/content/developer-guide]
 
 markdown_extensions:
   - toc:
@@ -44,6 +48,11 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.saneheaders
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
   - pymdownx.magiclink:
       hide_protocol: true
   - pymdownx.tabbed:
@@ -92,12 +101,12 @@ nav:
     - Analyses Pipelines Management: content/admin-guide/analyses-pipelines-management.md
   - Developer Guide:
     - Quickstart: content/developer-guide/quickstart.md
+    - Configuration: content/developer-guide/configuration.md
     - API Overview: content/developer-guide/api-overview.md
     - SQL Tables: content/developer-guide/sql-tables.md
     - Automated Testing: content/developer-guide/automated-testing.md
   - Sysadministrator Guide:
     - Dependencies: content/sysadmin-guide/dependencies.md
-    - Configuration: content/sysadmin-guide/configuration.md
     - Deployment: content/sysadmin-guide/deployment.md
   - About: content/about.md
   - 3TR-specific: content/3tr-specific-info.md
