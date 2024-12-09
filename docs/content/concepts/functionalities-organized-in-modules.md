@@ -16,7 +16,8 @@ It provides the basic functionalities to store, share, and manage data.
 
 The data visualisation module is leveraging [ShinyProxy](https://www.shinyproxy.io) 
 to provide private data visualisation environments per user.
-As a proof of concept, the module is providing a [CELLxGENE annotate]() instance.
+As a proof of concept, the module is providing a 
+[CELLxGENE annotate](https://github.com/chanzuckerberg/cellxgene) instance.
 
 ## Data Analyses
 

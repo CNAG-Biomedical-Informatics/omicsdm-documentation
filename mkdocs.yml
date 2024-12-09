@@ -77,13 +77,14 @@ markdown_extensions:
       url_download: true
   - pymdownx.arithmatex:
       generic: true
+  - neoteroi.cards
 
 # Navigation
 nav:
   - Home: index.md
   - Introduction:
     - What is OmicsDM?: content/introduction/what-is-omicsdm.md
-    - Data to be stored: content/introduction/data-to-be-stored.md
+    - Data which can be stored: content/introduction/stored-data-examples.md
   - Guides:
     - User Guide:
       - Introduction: content/user-guide/introduction.md
@@ -114,6 +115,7 @@ nav:
     - 3-tier Data Organisation: content/concepts/3-tier-data-organisation.md
     - Distributed File Storage: content/concepts/distributed-file-storage.md
     - Container Orchestration: content/concepts/docker-container-orchestration.md
+    - Modular structure: content/concepts/functionalities-organized-in-modules.md
   - About: content/about.md
   - 3TR-specific: content/3tr-specific-info.md
 
