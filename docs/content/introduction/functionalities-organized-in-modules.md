@@ -3,9 +3,12 @@
 The functionalities of the OmicsDM data warehouse solution are conceptually organized in modules,
 namely:
 
-- [Core](core)
-- [Data Visualisation](data-visualisation)
-- [Data Analyses](data-analyses)
+- [Core](#core)
+- [Data Visualisation](#data-visualisation)
+- [Data Analyses](#data-analyses)
+
+!!! Info "3TR specific"
+    The data visualisation and the analysis module is disabled in the 3TR instance of OmicsDM.
 
 ## Core
 
