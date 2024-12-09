@@ -4,6 +4,10 @@ This repository contains the source files to build the documentation
 for the OmicsDM data warehouse solution
 built for the 3TR project (https://www.3tr-imi.eu).
 
+The source code for the server and client can be found in the following repositories:
+https://github.com/CNAG-Biomedical-Informatics/omicsdm-server
+https://github.com/CNAG-Biomedical-Informatics/omicsdm-client
+
 ## Context
 
 OmicsDM started as the PhD thesis project of Ivo Christopher Leist (https://github.com/IvoLeist)
