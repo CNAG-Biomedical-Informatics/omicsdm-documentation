@@ -1,12 +1,12 @@
 These guidelines help maintain a consistent, clear, and scalable file naming convention for clinical data files, including REDCap exports, QC’d data, and converted data formats.
 
-## General Format
+#### General Format
 
 ```
 [Project/StudyID]_[Source]_[FileType]_[Version/Date]_QC[QCStatus]_[QCBy]_CONV[ConversionType].ext
 ```
 
-### Components
+#### Components
 
 1. **[Project/StudyID]**: Unique identifier for the project or study (e.g., `Study123`, `ProjectX`).
 2. **[Source]**: Origin of the file:
@@ -33,7 +33,7 @@ These guidelines help maintain a consistent, clear, and scalable file naming con
 
 ---
 
-## Examples
+#### Examples
 
 **Raw CSV Export (No QC)**  
 `Study123_REDCapRaw_CSV_20231204_QCNo.csv`
