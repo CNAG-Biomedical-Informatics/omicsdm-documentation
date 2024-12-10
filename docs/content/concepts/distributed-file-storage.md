@@ -59,7 +59,7 @@ The file upload is driven by [EvaporateJS](https://github.com/TTLabs/EvaporateJS
 a JavaScript library that allows for large file uploads (in chunks)
 directly from the browser to the S3 bucket.
 
-```mermaid
+<div class="mermaid"> 
 sequenceDiagram
   participant User
   participant client as OmicsDM Client (with EvaporateJS)
@@ -76,7 +76,7 @@ sequenceDiagram
   client->>S3: Complete Multipart Upload
   S3->>client: Confirm Multipart Upload Success
   client->>User: Notify Upload Complete
-```
+</div> 
 
 ## Automatic File Versioning
 
@@ -85,7 +85,7 @@ The OmicsDM data warehouse solution comes with automatic file versioning:
 A re-upload of a file with the same name will not overwrite the existing file on the S3 bucket
 but create a new version of it.
 
-```mermaid
+<div class="mermaid"> 
 sequenceDiagram
   participant User
   participant client as OmicsDM Client
@@ -99,14 +99,14 @@ sequenceDiagram
   S3->>client: Confirm Upload Success
   client->>server: Notify file upload success
   client->>User: Notify Upload Complete
-```
+</div> 
 
 ## File Download leveraging presigned URLs
 
 For each file selected to be downloaded, the user receives a unique download link,
 a so-called presigned URL. 
 
-```mermaid
+<div class="mermaid"> 
 sequenceDiagram
   participant User
   participant client as OmicsDM Client
@@ -120,7 +120,7 @@ sequenceDiagram
   server->>client: Return Presigned URL
   client->>User: Present Presigned URL
   User->>S3: Download File using Presigned URL
-```
+</div> 
 
 ## File deletion
 
