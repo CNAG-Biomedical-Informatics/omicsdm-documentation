@@ -23,3 +23,9 @@ Depending on your role, you can find the relevant information in the following s
 - [Developer](content/developer-guide/quickstart)
 - [System Administrator](content/sysadmin-guide/dependencies)
 
+In case you just want to explore the underlying concepts (click on the links to learn more):
+
+- [Group-based access control](content/concepts/group-based-access-control)
+- [3-tier Data Organisation](content/concepts/3-tier-data-organisation)
+- [Distributed File Storage](content/concepts/distributed-file-storage)
+- [Container Orchestration](content/concepts/docker-container-orchestration)
