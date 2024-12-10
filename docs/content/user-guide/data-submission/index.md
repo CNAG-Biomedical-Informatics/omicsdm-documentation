@@ -98,5 +98,4 @@ When the project is created, you can start creating datasets (the "folder" for y
     !!! Warning "3TR specific"
         Please do not see our data warehouse as a storage for your raw data.
         Only upload processed data that is ready for analyses.
-
 </div>
