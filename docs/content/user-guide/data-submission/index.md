@@ -37,7 +37,7 @@ fill it out and attach it to the email.
     Here is the link to directly navigate to the dataset creation page:  
     https://3tr.gpap.cnag.eu/portal/#/submitdatasets
 
-!!! Info "Recommended nomenclature for the Pheno-Clinical data file"
+??? Info "Recommended nomenclature for the Pheno-Clinical data file"
     {% include-markdown "content/user-guide/data-submission/pheno-clinical-data-nomenclature.md" %}
     
 When the project is created, you can start creating datasets (the "folder" for your files)
@@ -54,11 +54,10 @@ When the project is created, you can start creating datasets (the "folder" for y
   4. Click on "VALIDATE" to check if all mandatory fields are filled out
   5. Click on "SUBMIT" to create the dataset(s)
 
-  !!! Info "Why use the dataset creation template?" 
-      Handy when you want to create multiple datasets
+!!! Info "Why use the dataset creation template?" 
+    Handy when you want to create multiple datasets
 
-  !!! Info "FAQ"
-      {% include-markdown "content/user-guide/faq.md" start="## Dataset creation" end="## File upload" %}
-
+!!! Info "FAQ"
+    {% include-markdown "content/user-guide/faq.md" start="## Dataset creation" end="## File upload" %}
 
 {% include "content/user-guide/data-submission/steps.md" %}
