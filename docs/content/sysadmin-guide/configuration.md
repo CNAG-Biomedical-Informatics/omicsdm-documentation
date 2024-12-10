@@ -24,9 +24,10 @@ As you see when navigating to
 For both clients the following shared token mappers have been created:
 
 | Name | Type | Token Claim Name | Needed for |
-|------|-------------|----------------| ------------------|------------------|
+|------|-------------|----------------| ------------------|
 | group |  Group Membership | groups | add the users' group to the access token |
-| email |  User Property | email | add the users' email to the access token |
+| email |  User Property | email | |
+| aud |  Audience | aud | |
 
 
 
