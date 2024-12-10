@@ -37,7 +37,7 @@ fill it out and attach it to the email.
     Here is the link to directly navigate to the dataset creation page:  
     https://3tr.gpap.cnag.eu/portal/#/submitdatasets
 
-!!! Info "Recommended nomenclature for the Pheno-Clinical data file"
+??? Info "Recommended nomenclature for the Pheno-Clinical data file"
     {% include-markdown "content/user-guide/data-submission/pheno-clinical-data-nomenclature.md" %}
     
 When the project is created, you can start creating datasets (the "folder" for your files)
