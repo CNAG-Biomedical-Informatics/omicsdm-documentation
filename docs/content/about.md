@@ -8,7 +8,7 @@ at [CNAG](https://www.cnag.eu){target="_blank"} in 2020. It was initially develo
 as a flexible and scalable **data storage and sharing solution** of processed **omics data**
 and its patient's **pheno-clinical information** for the [3TR](https://www.3tr-imi.eu){target="_blank"} consortium.
 Since Q1 2022 it is in production use by 3TR. Over the years, 3rd-party tools have been integrated
-to provide (a) data visualization and (b) analysis capabilities.
+to provide (a) data visualisation and (b) analysis capabilities.
 { .card }
 
 === "Contributors"
