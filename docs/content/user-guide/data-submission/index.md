@@ -33,31 +33,33 @@ fill it out and attach it to the email.
 
 ## Create datasets and attach Pheno-Clinical data
 
-!!! Info "3TR specific"
-    Here is the link to directly navigate to the dataset creation page:  
-    https://3tr.gpap.cnag.eu/portal/#/submitdatasets
-
 ??? Info "Recommended nomenclature for the Pheno-Clinical data file"
     {% include-markdown "content/user-guide/data-submission/pheno-clinical-data-nomenclature.md" %}
     
 When the project is created, you can start creating datasets (the "folder" for your files)
 
-1. Navigate to the dataset creation page: 
-  1. Click on "DATA SUBMISSION" in the navigation bar on the left
-  2. Click on "Create new Dataset"
-  3. Select the project you want to create the dataset in
+<div class="grid" markdown>
+
+1. Navigate to the dataset creation page:
+
+    === "On the UI"
+        1. Click on "DATA SUBMISSION" in the navigation bar on the left
+        2. Click on "Create new Dataset"
+        3. Select the project you want to create the dataset in
+
+    === "3TR specific: Link to the dataset creation page"
+        [3tr.gpap.cnag.eu/portal/#/submitdatasets](https://3tr.gpap.cnag.eu/portal/#/submitdatasets)
 
 2. Create the dataset(s):
-  1. Fill out the table on the page manually or by uploading a filled out [dataset_template](https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation/blob/main/omicsdm_templates/project_template.tsv)
-  2. Click on "Browse" in the "Clinical File" column to select the corresponding pheno-clinical information file to be uploaded
-  3. Optional: Click on "Browse" in the "Data Usage Policy File" column to upload a file containing specific data usage policy
-  4. Click on "VALIDATE" to check if all mandatory fields are filled out
-  5. Click on "SUBMIT" to create the dataset(s)
+    1. Fill out the table on the page manually 
+    or by uploading a filled out 
+    [dataset_template](
+        https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation/blob/main/omicsdm_templates/project_template.tsv
+     "Tip: Especially handy when you want to create multiple datasets" ).
+    2. Click on "Browse" in the "Clinical File" column to select the corresponding pheno-clinical information file to be uploaded
+    3. Optional: Click on "Browse" in the "Data Usage Policy File" column to upload a file containing specific data usage policy
+    4. Click on "VALIDATE" to check if all mandatory fields are filled out
+    5. Click on "SUBMIT" to create the dataset(s)
 
-!!! Info "Why use the dataset creation template?" 
-    Handy when you want to create multiple datasets
-
-!!! Info "FAQ"
-    {% include-markdown "content/user-guide/faq.md" start="## Dataset creation" end="## File upload" %}
-
-{% include "content/user-guide/data-submission/steps.md" %}
+    !!! Info "FAQ"
+        {% include-markdown "content/user-guide/faq.md" start="## Dataset creation" end="## File upload" %}

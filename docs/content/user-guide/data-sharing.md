@@ -11,8 +11,7 @@
 
 ## Steps to (un)share data with a group:
 
-!!! Info "3TR specific"
-    Here is the link to the page showing all accessible datasets:
+??? Info "3TR specific: Link to the datasets overview page"
     [3tr.gpap.cnag.eu/portal/#/datasets](https://3tr.gpap.cnag.eu/portal/#/datasets)
 
 1. Navigate to the datasets overview page by clicking on "DATA MANAGEMENT" in the navigation bar on the left

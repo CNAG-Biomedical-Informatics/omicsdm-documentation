@@ -1,6 +1,6 @@
 # File Download
 
-!!! Info "3TR specific"
+!!! Info "3TR specific: Link to the files overview page"
     Here is the link to the page showing all accessible files:
     [3tr.gpap.cnag.eu/portal/#/files](https://3tr.gpap.cnag.eu/portal/#/files)
 
