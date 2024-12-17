@@ -1,0 +1,1133 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "//localhost/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "test",
+      "description": "test related operations"
+    },
+    {
+      "name": "template",
+      "description": "template related operations"
+    },
+    {
+      "name": "projects",
+      "description": "projects related operations"
+    },
+    {
+      "name": "datasets",
+      "description": "datasets related operations"
+    },
+    {
+      "name": "files",
+      "description": "files related operations"
+    },
+    {
+      "name": "analysis",
+      "description": "analysis related operations"
+    }
+  ],
+  "paths": {
+    "/api/analysis/": {
+      "post": {
+        "tags": [
+          "analysis"
+        ],
+        "summary": "create a new project in Opal via Jenkins",
+        "operationId": "post_analysis_data2",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/analysis/abort": {
+      "post": {
+        "tags": [
+          "analysis"
+        ],
+        "summary": "abort an analysis",
+        "operationId": "post_analysis_abort",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/analysis/data": {
+      "post": {
+        "tags": [
+          "analysis"
+        ],
+        "summary": "create a new project in Opal via Jenkins",
+        "operationId": "post_analysis_data",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/analysis/files": {
+      "post": {
+        "tags": [
+          "analysis"
+        ],
+        "summary": "create a new project in Opal via Jenkins",
+        "operationId": "post_analysis_files",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/analysis/results": {
+      "post": {
+        "tags": [
+          "analysis"
+        ],
+        "summary": "create a new project in Opal via Jenkins",
+        "operationId": "post_analysis_results",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/analysis/run": {
+      "post": {
+        "tags": [
+          "analysis"
+        ],
+        "summary": "create a new project in Opal via Jenkins",
+        "operationId": "post_analysis_run",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/analysis/start": {
+      "post": {
+        "tags": [
+          "analysis"
+        ],
+        "summary": "Add a new analysis to the database",
+        "operationId": "post_analysis_start",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/analysis/status": {
+      "post": {
+        "tags": [
+          "analysis"
+        ],
+        "summary": "get analysis status",
+        "operationId": "post_analysis_status",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/analysis/submissiondata": {
+      "post": {
+        "tags": [
+          "analysis"
+        ],
+        "summary": "create a new project in Opal via Jenkins",
+        "operationId": "post_analysis_submission_data",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/analysis/template/query": {
+      "post": {
+        "tags": [
+          "analysis"
+        ],
+        "summary": "create a new project in Opal via Jenkins",
+        "operationId": "post_analysis_template_query",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/analysis/template/save": {
+      "post": {
+        "tags": [
+          "analysis"
+        ],
+        "summary": "create a new project in Opal via Jenkins",
+        "operationId": "post_analysis_templates_submission",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/analysis/types": {
+      "post": {
+        "tags": [
+          "analysis"
+        ],
+        "summary": "get possible analysis types based on the files",
+        "operationId": "post_analysis_types",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/analysis/viewcols": {
+      "get": {
+        "tags": [
+          "analysis"
+        ],
+        "summary": "Get datasets view fields",
+        "description": "Returns...",
+        "operationId": "get_analysis_view_cols",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/curltest": {
+      "get": {
+        "tags": [
+          "test"
+        ],
+        "summary": "To test curl access",
+        "operationId": "get_curl_test",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/datasets/": {
+      "put": {
+        "tags": [
+          "datasets"
+        ],
+        "summary": "update a Dataset of a certain userid",
+        "operationId": "put_dataset_data",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/datasets/admin/update": {
+      "post": {
+        "tags": [
+          "datasets"
+        ],
+        "summary": "Update dataset(s)",
+        "operationId": "post_dataset_data_update",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/datasets/admin/view": {
+      "post": {
+        "tags": [
+          "datasets"
+        ],
+        "summary": "Get all the dataset data",
+        "operationId": "post_dataset_data_admin_view",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/datasets/adminviewcols": {
+      "post": {
+        "tags": [
+          "datasets"
+        ],
+        "summary": "Get datasets admin columns",
+        "description": "Returns...",
+        "operationId": "post_datasets_admin_view_cols",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/datasets/all": {
+      "post": {
+        "tags": [
+          "datasets"
+        ],
+        "summary": "Get all the datasets data by keycloak group",
+        "description": "Returns...",
+        "operationId": "post_dataset_view",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/All_DATASETS_GET_RESPONSE"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        },
+        "x-codegen-request-body-name": "payload"
+      }
+    },
+    "/api/datasets/clinical/uploadfinish": {
+      "post": {
+        "tags": [
+          "datasets"
+        ],
+        "summary": "create a presigned url for the clinical data upload",
+        "description": "and store it in the database",
+        "operationId": "post_dataset_clinical_data_upload_finish",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/datasets/create": {
+      "post": {
+        "tags": [
+          "datasets"
+        ],
+        "description": "Returns...",
+        "operationId": "post_dataset_submission",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/datasets/list": {
+      "post": {
+        "tags": [
+          "datasets"
+        ],
+        "summary": "Get all datasets by keycloak group and filtered by project_id",
+        "description": "Returns list of all dataset IDs of the user's kc group;\n            can be filtered by dataset id\n        \n(additionally it can be filtered by the dataset_id)",
+        "operationId": "post_datasets_list",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/datasets/policy/uploadfinish": {
+      "post": {
+        "tags": [
+          "datasets"
+        ],
+        "summary": "create a presigned url for the dataset policy upload",
+        "description": "and store it in the database",
+        "operationId": "post_dataset_policy_upload_finish",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/datasets/submissioncols": {
+      "post": {
+        "tags": [
+          "datasets"
+        ],
+        "summary": "Get the columnn specification for the dataset submission",
+        "description": "Modify the columns for dataset submission\n        \nfrom the project table",
+        "operationId": "post_datasets_submission_cols",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/datasets/validate": {
+      "post": {
+        "tags": [
+          "datasets"
+        ],
+        "description": "Returns...",
+        "operationId": "post_dataset_submission_validation",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/datasets/viewcols": {
+      "get": {
+        "tags": [
+          "datasets"
+        ],
+        "summary": "Get datasets view fields",
+        "description": "Returns...",
+        "operationId": "get_datasets_view_cols",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/files/": {
+      "get": {
+        "tags": [
+          "files"
+        ],
+        "summary": "sign request",
+        "description": "https://github.com/TTLabs/EvaporateJS/blob/master/example/signing_example.py",
+        "operationId": "get_request_signer",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/files/admin/update": {
+      "post": {
+        "tags": [
+          "files"
+        ],
+        "summary": "Update file(s)",
+        "operationId": "post_file_data_update",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/files/admin/view": {
+      "post": {
+        "tags": [
+          "files"
+        ],
+        "summary": "Get all the file data",
+        "operationId": "post_file_data_admin_view",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/files/adminviewcols": {
+      "post": {
+        "tags": [
+          "files"
+        ],
+        "summary": "Get datasets view fields",
+        "description": "Returns...",
+        "operationId": "post_files_admin_view_cols",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/files/all": {
+      "post": {
+        "tags": [
+          "files"
+        ],
+        "operationId": "post_file_data_view",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/files/cellxgene": {
+      "post": {
+        "tags": [
+          "files"
+        ],
+        "operationId": "post_file_cellxgene",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/files/disable": {
+      "post": {
+        "tags": [
+          "files"
+        ],
+        "operationId": "post_file_disable",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/files/donwnload": {
+      "post": {
+        "tags": [
+          "files"
+        ],
+        "operationId": "post_file_download",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/files/download": {
+      "post": {
+        "tags": [
+          "files"
+        ],
+        "operationId": "post_file_download",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/files/finishupload": {
+      "post": {
+        "tags": [
+          "files"
+        ],
+        "operationId": "post_file_finish_upload",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/files/startupload": {
+      "post": {
+        "tags": [
+          "files"
+        ],
+        "operationId": "post_file_data_start_upload",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/files/submissioncols": {
+      "get": {
+        "tags": [
+          "files"
+        ],
+        "summary": "Get file submission fields",
+        "description": "Returns...",
+        "operationId": "get_file_submission_cols",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/files/viewcols": {
+      "post": {
+        "tags": [
+          "files"
+        ],
+        "summary": "Get datasets view fields",
+        "description": "Returns...",
+        "operationId": "post_files_admin_view_cols",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/projects/": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Update a project",
+        "operationId": "post_project_update",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/projects/admin/update": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Update a project",
+        "operationId": "post_project_update",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/projects/admin/view": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Get all the project data",
+        "operationId": "post_project_data_admin_view",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/projects/adminviewcols": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Get project submission fields",
+        "description": "Returns...",
+        "operationId": "post_project_view_cols",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/projects/all": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Get all the projects data by keycloak group",
+        "operationId": "post_project_list",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/projects/create": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Create a new project",
+        "description": "Returns...",
+        "operationId": "post_project_create",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/projects/submissioncols": {
+      "get": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Get project submission fields",
+        "description": "Returns...",
+        "operationId": "get_project_submission_cols",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/projects/validate": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "description": "Returns...",
+        "operationId": "post_project_creation_validation",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/template/": {
+      "get": {
+        "tags": [
+          "template"
+        ],
+        "summary": "get the template",
+        "operationId": "get_template_data",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/tokentest": {
+      "get": {
+        "tags": [
+          "test"
+        ],
+        "operationId": "get_token_test",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {}
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "All_DATASETS_GET_RESPONSE": {
+        "type": "object",
+        "properties": {
+          "pageSize": {
+            "type": "integer",
+            "description": "Number of datasets per page"
+          },
+          "page": {
+            "type": "integer",
+            "description": "Page number"
+          },
+          "sorted": {
+            "type": "string",
+            "description": "Sorted by"
+          },
+          "filtered": {
+            "type": "string",
+            "description": "Filtered by"
+          }
+        }
+      }
+    },
+    "responses": {
+      "ParseError": {
+        "description": "When a mask can't be parsed",
+        "content": {}
+      },
+      "MaskError": {
+        "description": "When any error occurs on mask",
+        "content": {}
+      },
+      "ApiException": {
+        "description": "Return custom JSON when APIException is raised",
+        "content": {}
+      }
+    }
+  },
+  "x-original-swagger-version": "2.0"
+}
