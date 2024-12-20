@@ -25,6 +25,32 @@ information about the patients.
     - Legacy: Raw CSV
     - Collected during 3TR: REDCap exports (CSV)
 
+??? Example "Exporting data from REDCap"
+
+    We recommend that you export your REDCap project in two formats:
+
+    1. **CSV / Microsoft Excel (raw data)**
+
+       Please select the corresponding box when exporting:
+
+       ![REDCap export](https://github.com/CNAG-Biomedical-Informatics/convert-pheno/blob/main/docs/img/redcap-export.png?raw=true){ width="300" }
+
+       *Figure: Example of REDCap export settings. Source: [CDC](https://www.cdc.gov/nhsn/pdfs/validation/2022/export-data-from-redcap.pdf)*
+
+       Additionally, when configuring your export settings, ensure that in the **Additional report options**, the option "Combine checkbox options into single column of only the checked-off options" is **not** selected.
+
+       ![Checkbox export](https://github.com/CNAG-Biomedical-Informatics/convert-pheno/blob/main/docs/img/redcap-checkbox.png?raw=true){ width="500" }
+
+       *Figure: Example of REDCap export settings. Source: [CDC](https://www.cdc.gov/nhsn/pdfs/validation/2022/export-data-from-redcap.pdf)*
+
+       After exporting the data, you must also download the REDCap dictionary in CSV format. This can be done within REDCap by navigating to `Project Setup/Data Dictionary/Download the current`.
+
+    2. **CSV / Microsoft Excel (labels)**
+
+       The procedure for exporting as **CSV / Microsoft Excel (labels)** is the same as above. Just ensure you select the correct export format.
+
+       If you need more information on REDCap, we recommend consulting the comprehensive [documentation](https://confluence.research.cchmc.org/display/CCTSTRED/Cincinnati+REDCap+Resource+Center) provided by the Cincinnati Children's Hospital Medical Center.
+
 #### Flowchart of clinical data in the warehouse
 
 <div class="mermaid">
