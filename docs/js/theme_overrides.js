@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
   githubLink.addEventListener('click', (event) => {
     event.preventDefault();
     window.open(
-      "https://github.com/CNAG-Biomedical-Informatics/pheno-ranker",
+      "https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation",
       '_blank'
     );
   });
