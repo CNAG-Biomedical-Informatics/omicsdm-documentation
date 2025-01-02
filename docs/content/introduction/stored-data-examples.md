@@ -14,7 +14,7 @@ OmicsDM was designed to store the following two data types:
     !!! Warning "3TR specific"
         Only submit processed data that is ready for analyses.
 
-  -   :material-human-non-binary:{ .lg .middle } __Pheno-Clinical Data__
+  -   :fontawesome-solid-clipboard-user:{ .lg .middle } __Pheno-Clinical Data__
 
     ---
 

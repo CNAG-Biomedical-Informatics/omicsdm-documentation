@@ -11,7 +11,7 @@
     | Legacy | Data collected in clinical trials before the start of the 3TR project | Private; Visibility not changeable | Optional |
     | Collected during 3TR | Data generated during the 3TR project | Visible to all; Visibility changeable | Not allowed |
 
-The in the data warehouse to be uploaded data can be divided conceptually into:
+The in the data warehouse to be uploaded data can be divided into:
 
 <div class="grid cards" markdown>
 
@@ -29,4 +29,4 @@ The in the data warehouse to be uploaded data can be divided conceptually into:
 
     Pheno-clinical = Phenotypic + clinical data
 
-    [:octicons-arrow-right-24: Reference](../pheno-clinical-data)
+    [:octicons-arrow-right-24: Learn more](../pheno-clinical-data)
