@@ -11,10 +11,22 @@
     | Legacy | Data collected in clinical trials before the start of the 3TR project | Private; Visibility not changeable | Optional |
     | Collected during 3TR | Data generated during the 3TR project | Visible to all; Visibility changeable | Not allowed |
 
-### Molecular data
+The in the data warehouse to be uploaded data can be divided conceptually into:
 
-{% include-markdown "content/3tr-specific/molecular-data.md" %}
+<div class="grid cards" markdown>
 
-### Pheno-clinical data
+-   :dna:{ .lg .middle } __Molecular Data__
 
-{% include-markdown "content/3tr-specific/pheno-clinical-data.md" %}
+    ---
+
+    Under molecular data falls all kinds of omics data, such as RNA-seq count matrices.
+
+    [:octicons-arrow-right-24: Learn more](../molecular-data)
+
+-   :fontawesome-solid-clipboard-user:{ .lg .middle } __Pheno-Clinical Data__
+
+    ---
+
+    Pheno-clinical = Phenotypic + clinical data
+
+    [:octicons-arrow-right-24: Reference](../pheno-clinical-data)
