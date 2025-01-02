@@ -116,7 +116,7 @@ nav:
     - Distributed File Storage: content/concepts/distributed-file-storage.md
     - Container Orchestration: content/concepts/docker-container-orchestration.md
   - About: content/about.md
-  - 3TR-specific: content/3tr-specific-info.md
+  - 3TR-specific: content/3tr-specific/index.md
 
 theme: 
   name: material
