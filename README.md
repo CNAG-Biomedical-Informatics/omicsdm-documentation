@@ -1,8 +1,12 @@
 # Repository to build the OmicsDM documentation
 
+[![Documentation Status](https://github.com/cnag-biomedical-informatics/omicsdm-documentation/actions/workflows/deploy.yml/badge.svg)](https://github.com/cnag-biomedical-informatics/omicsdm-documentation/actions/workflows/deploy.yml)
+
+**Live at**: <a href="https://cnag-biomedical-informatics.github.io/omicsdm-documentation" target="_blank">https://cnag-biomedical-informatics.github.io/omicsdm-documentation</a>
+
 This repository contains the source files to build the documentation
 for the OmicsDM data warehouse solution
-built for the 3TR project (https://www.3tr-imi.eu).
+developed for the 3TR project (https://www.3tr-imi.eu).
 
 The source code for the server and client can be found in the following repositories:
 
