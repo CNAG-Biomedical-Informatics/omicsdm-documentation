@@ -50,42 +50,41 @@ flowchart TB
     style Analytics fill:#F3E5F5,stroke:#8E24AA,stroke-width:2px, color:#000, font-size:14px
 
     %% Start and End node styles
-    A((Start: REDCap <br/>Data Files))
+    A((📥 Start: REDCap <br/>Data Files))
     style A fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px, color:#000, font-size:16px
-    H((End: Clinical Data Cycle))
+    H((📦 End: Clinical Data Cycle))
     style H fill:#FFCDD2,stroke:#E53935,stroke-width:2px, color:#000, font-size:16px
 
     %% Data Producer Subgraph
-    subgraph DataProducer [Data Producer]
-      B["Uploads <br/>i) REDCap raw data (CSV) + dictionaries (CSV) <br/>ii) CSV with labels"]
-      %% Reduce font size and padding within subgraphs
+    subgraph DataProducer [🧑‍💻 Data Producer]
+      B["📤 Uploads <br/>i) REDCap raw data (CSV) + dictionaries (CSV) <br/>ii) CSV with labels"]
       style B font-size:14px, padding:10px
     end
 
     %% Disease Experts Subgraph
-    subgraph DiseaseExperts [Disease Experts]
-      C["Perform QC locally"]
+    subgraph DiseaseExperts [🧪 Disease Experts]
+      C["🔍 Perform QC locally"]
       style C font-size:14px, padding:10px
     end
 
     %% CNAG Subgraph
-    subgraph CNAG [CNAG]
-      E["REDCap data + dictionaries<br/>are harmonized to GA4GH (BFF/PXF)<br/>with Convert-Pheno"]
+    subgraph CNAG [🏢 CNAG]
+      E["🛠️ Data are harmonized to GA4GH (BFF/PXF) and <br/>OMOP CDM (CSV) formats with Convert-Pheno"]
       style E font-size:14px, padding:10px
     end
 
     %% Analytics Subgraph
-    subgraph Analytics [Analytics]
-      F["Users download data for analysis or research"]
+    subgraph Analytics [📊 Analytics]
+      F["⬇️ Users download data for analysis or research"]
       style F font-size:14px, padding:10px
     end
 
     %% Define connections with arrows and labels
     A -->|Upload Data| B
-    B -->|Download Labeled CSV| C
-    C -->|Upload QC CSV to Warehouse| F
-    B -->|Download to CNAG| E
-    E -->|Upload Harmonized GA4GH Data| F
+    B -->|Partner Download of CSV w/ Labels| C
+    C -->|Upload QC CSV to OmicsDM Warehouse| F
+    B -->|CNAG download of REDCap raw data| E
+    E -->|Upload Harmonized Clinical Data to OmicsDM Warehouse| F
     F -->|Store Data| H
 
     %% Define link styles using MkDocs Material-friendly colors
