@@ -34,7 +34,7 @@ fill it out and attach it to the email.
 ## Create Datasets and Attach Pheno-Clinical Data
 
 ??? Info "Recommended nomenclature for the Pheno-Clinical data file"
-    Please see the following [link](../../3tr-specific/pheno-clinical-data-nomenclature.md)
+    Please see the following [link](../../3tr-specific/pheno-clinical-data-nomenclature.md).
     
 When the project is created, you can start creating datasets (the "folder" for your files)
 

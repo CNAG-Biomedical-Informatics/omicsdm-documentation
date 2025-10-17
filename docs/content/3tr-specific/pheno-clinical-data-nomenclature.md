@@ -78,7 +78,7 @@ Use this to lint filenames. Adjust only if you extend vocabularies.
 
 ## CLI Linter Scripts
 
-Use the accompanying [Python](./validate_filename.py)  or [Perl](./validate_filename.pl) scripts to validate names locally.
+Use the accompanying [Python](https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation/blob/main/docs/content/3tr-specific/3tr_validate_filename.py)  or [Perl](https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation/blob/main/docs/content/3tr-specific/3tr_validate_filename.pl) scripts to validate names locally.
 
 **Example**
 
