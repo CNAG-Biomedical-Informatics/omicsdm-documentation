@@ -78,7 +78,7 @@ Use this to lint filenames. Adjust only if you extend vocabularies.
 
 ## CLI Linter Scripts
 
-Use the accompanying [Python](https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation/blob/main/docs/content/3tr-specific/3tr_validate_filename.py)  or [Perl](https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation/blob/main/docs/content/3tr-specific/3tr_validate_filename.pl) scripts to validate names locally.
+Use the accompanying [Python](https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation/blob/main/docs/content/3tr-specific/3tr_validate_filename.py), [Perl](https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation/blob/main/docs/content/3tr-specific/3tr_validate_filename.pl) or [R](https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation/blob/main/docs/content/3tr-specific/3tr_validate_filename.R) scripts to validate names locally.
 
 **Example**
 
@@ -88,4 +88,7 @@ python3 3tr_validate_filename.py 3TR_MS_Study123_REDCAP-RAW_20231204_NA-CNAG.csv
 
 # Perl 5
 perl 3tr_validate_filename.pl 3TR_MS_Study123_REDCAP-RAW_20231204_NA-CNAG.csv
+
+# R
+Rscript 3tr_validate_filename.R 3TR_MS_Study123_REDCAP-RAW_20231204_NA-CNAG.csv
 ```
