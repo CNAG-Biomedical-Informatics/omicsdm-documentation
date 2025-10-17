@@ -120,6 +120,9 @@ nav:
     - Introduction: content/3tr-specific/introduction.md
     - Molecular Data: content/3tr-specific/molecular-data.md
     - Pheno-Clinical Data: content/3tr-specific/pheno-clinical-data.md
+    - Filename Convention:
+      - Clinical Files: content/3tr-specific/pheno-clinical-data-nomenclature.md
+      - Molecular Files: content/3tr-specific/molecular-data-nomenclature.md
 
 theme: 
   name: material
