@@ -8,11 +8,11 @@
 
 pattern <- paste0(
   "^[A-Z0-9]+_[A-Z0-9]+_[A-Za-z0-9-]+_",
-  "(?:REDCAP-(?:RAW|LABEL|DICT)|CSV-RAW)_",
+  "(?:REDCAP-(?:RAW|LABEL|DICT)|CSV-RAW|CDISC)_",
   "\\d{8}_",
   "(?:PASS|FAIL|PARTIAL|NA)-[A-Z0-9]+",
   "(?:_CONV-(?:OMOP|PXF|BFF)(?:-[0-9]+(?:[._][0-9]+)*)?)?",
-  "\\.(?:csv|json)$"
+  "\\.(?:csv|json|txt|yaml)$"
 )
 
 args <- commandArgs(trailingOnly = TRUE)

@@ -7,7 +7,7 @@ These guidelines define a minimal, strict, and parseable file naming convention 
 ```
 
 ??? Example "Field Rules"
-    - Allowed characters: `A–Z`, `0–9`, and `-` inside tokens. Use `_` only as the token separator.
+    - Allowed characters: `A-Z`, `0-9`, and `-` inside tokens. Use `_` only as the token separator.
     - No spaces or diacritics.
     - Extensions are lowercase.
     - `Disease` is required and is always the **second** token.
@@ -15,25 +15,25 @@ These guidelines define a minimal, strict, and parseable file naming convention 
 
 ## Components
 
-1. **[Project]** — Consortium or project code (e.g., `3TR`, `PRECISESADS`, `BRAMS`).
-2. **[Disease]** — Disease acronym (e.g., `MS`, `IBD`, `UC`).
-3. **[StudyID]** — Unique study identifier (e.g., `Study123`, `CohortA`).
-4. **[Source]** — Data origin/type (see controlled list below).
-5. **[Date|Version]** — Either:
+1. **[Project]** - Consortium or project code (e.g., `3TR`, `PRECISESADS`).
+2. **[Disease]** - Disease acronym (e.g., `MS`, `IBD`, `UC`).
+3. **[StudyID]** - Unique study identifier (e.g., `Study123`, `CohortA`).
+4. **[Source]** - Data origin/type (see controlled list below).
+5. **[Date|Version]** - Either:
     - Date: `YYYYMMDD`, or
     - Version: `vN` or `vN.N.N`.
-6. **[QCStatus]-[QCBy]** — Required pair:
+6. **[QCStatus]-[QCBy]** - Required pair:
     - `QCStatus` in `{PASS, FAIL, PARTIAL, NA}`.
     - `QCBy` is the center code performing QC (e.g., `CNAG`, `KI`, `FPS`).
-7. **_CONV-Target[-SchemaVer]** — Optional conversion info:
+7. **_CONV-Target[-SchemaVer]** - Optional conversion info:
     - `Target` in `{OMOP, PXF, BFF}`.
     - Optional `SchemaVer` (e.g., `5_4`, `2.0`).
-8. **.ext** — File extension: `.csv`, `.json` (extend cautiously as needed).
+8. **.ext** - File extension: `.csv`, `.json`, `.txt` and `yaml` (extend cautiously as needed).
 
 ??? Example "Controlled Vocabularies"
 
     - **Source**:  
-      `REDCAP-RAW` (raw export), `REDCAP-LABEL` (labeled export), `REDCAP-DICT` (data dictionary), `CSV-RAW` (free-form CSV)
+      `REDCAP-RAW` (raw export), `REDCAP-LABEL` (labeled export), `REDCAP-DICT` (data dictionary), `CSV-RAW` (free-form CSV), `CDISC` (export)
 
     - **QCStatus**:  
       `PASS`, `FAIL`, `PARTIAL`, `NA`
@@ -73,7 +73,7 @@ PRECISESADS_IBD_Study123_CSV-RAW_v1.1.0_PARTIAL-FPS.csv
 Use this to lint filenames. Adjust only if you extend vocabularies.
 
 ```
-^[A-Z0-9]+_[A-Z0-9]+_[A-Za-z0-9-]+_(?:REDCAP-(?:RAW|LABEL|DICT)|CSV-RAW)_\d{8}_(?:PASS|FAIL|PARTIAL|NA)-[A-Z0-9]+(?:_CONV-(?:OMOP|PXF|BFF)(?:-[0-9]+(?:[._][0-9]+)*)?)?\.(?:csv|json)$
+^[A-Z0-9]+_[A-Z0-9]+_[A-Za-z0-9-]+_(?:REDCAP-(?:RAW|LABEL|DICT)|CSV-RAW|CDISC)_\d{8}_(?:PASS|FAIL|PARTIAL|NA)-[A-Z0-9]+(?:_CONV-(?:OMOP|PXF|BFF)(?:-[0-9]+(?:[._][0-9]+)*)?)?\.(?:csv|json|txt|yaml)$
 ```
 
 ## CLI Linter Scripts

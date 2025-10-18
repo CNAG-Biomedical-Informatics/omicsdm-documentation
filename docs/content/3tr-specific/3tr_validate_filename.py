@@ -11,11 +11,11 @@ import sys
 
 PATTERN = re.compile(
     r'^[A-Z0-9]+_[A-Z0-9]+_[A-Za-z0-9-]+_'
-    r'(?:REDCAP-(?:RAW|LABEL|DICT)|CSV-RAW)_'
+    r'(?:REDCAP-(?:RAW|LABEL|DICT)|CSV-RAW|CDISC)_'
     r'\d{8}_'
     r'(?:PASS|FAIL|PARTIAL|NA)-[A-Z0-9]+'
     r'(?:_CONV-(?:OMOP|PXF|BFF)(?:-[0-9]+(?:[._][0-9]+)*)?)?'
-    r'\.(?:csv|json)$'
+    r'\.(?:csv|json|txt|yaml)$'
 )
 
 def main():
