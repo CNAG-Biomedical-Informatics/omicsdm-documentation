@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Author: Manuel Rueda (manuel.rueda@cnag.eu)
 # Date: Oct-17-2025
+# Version: 0.1
 #
 # Minimal filename validator for the 3TR clinical naming convention.
 # Usage: python3 validate_filename_simple.py <filename>

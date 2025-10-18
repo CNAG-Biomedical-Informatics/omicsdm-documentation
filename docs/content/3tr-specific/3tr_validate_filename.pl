@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 # Author: Manuel Rueda (manuel.rueda@cnag.eu)
 # Date: Oct-17-2025
+# Version: 0.1
 #
 # Minimal filename validator for the 3TR clinical naming convention.
 # Usage: perl validate_filename_simple.pl <filename>
