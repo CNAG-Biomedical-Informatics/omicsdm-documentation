@@ -119,9 +119,9 @@ nav:
   - 3TR-specific:
     - Introduction: content/3tr-specific/introduction.md
     - Molecular Data: content/3tr-specific/molecular-data.md
-    - Pheno-Clinical Data: content/3tr-specific/pheno-clinical-data.md
+    - Clinical Data: content/3tr-specific/clinical-data.md
     - Filename Convention:
-      - Clinical Files: content/3tr-specific/pheno-clinical-data-nomenclature.md
+      - Clinical Files: content/3tr-specific/clinical-data-nomenclature.md
       - Molecular Files: content/3tr-specific/molecular-data-nomenclature.md
 
 theme: 
