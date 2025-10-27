@@ -1,0 +1,3714 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Comprehensive guide to the OmicsDM data management warehouse.">
+      
+      
+        <meta name="author" content="OmicsDM Team">
+      
+      
+      
+        <link rel="prev" href="../configuration/">
+      
+      
+        <link rel="next" href="../sql-tables/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>API Overview - OmicsDM Data Warehouse Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../css/theme_overrides.css">
+    
+      <link rel="stylesheet" href="../../../css/neoteroi-mkdocs.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#servers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="OmicsDM Data Warehouse Documentation" class="md-header__button md-logo" aria-label="OmicsDM Data Warehouse Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OmicsDM Data Warehouse Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    omicsdm-documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="OmicsDM Data Warehouse Documentation" class="md-nav__button md-logo" aria-label="OmicsDM Data Warehouse Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    OmicsDM Data Warehouse Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    omicsdm-documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/what-is-omicsdm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is OmicsDM?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/stored-data-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data which can be stored
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/functionalities-organized-in-modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OmicsDM's modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/get-access-3tr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Get Access (3TR partners only)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/data-submission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Submission
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/data-sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Sharing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/file-download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/data-visualisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Visualisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/data-analyses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Run Analyses Pipelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Administrator Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Administrator Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin-guide/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin-guide/user-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin-guide/data-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin-guide/analyses-pipelines-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analyses Pipelines Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quickstart
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API Overview
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Overview
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-apianalysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/analysis/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apianalysisabort" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/analysis/abort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apianalysisdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/analysis/data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apianalysisfiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/analysis/files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apianalysisresults" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/analysis/results
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apianalysisrun" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/analysis/run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apianalysisstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/analysis/start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apianalysisstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/analysis/status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apianalysissubmissiondata" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/analysis/submissiondata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apianalysistemplatequery" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/analysis/template/query
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apianalysistemplatesave" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/analysis/template/save
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apianalysistypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/analysis/types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-apianalysisviewcols" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /api/analysis/viewcols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    <span class="md-ellipsis">
+      test
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-apicurltest" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /api/curltest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-apitokentest" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /api/tokentest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      datasets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#put-apidatasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      PUT /api/datasets/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apidatasetsadminupdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/datasets/admin/update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apidatasetsadminview" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/datasets/admin/view
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apidatasetsadminviewcols" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/datasets/adminviewcols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apidatasetsall" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/datasets/all
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apidatasetsclinicaluploadfinish" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/datasets/clinical/uploadfinish
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apidatasetscreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/datasets/create
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apidatasetslist" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/datasets/list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apidatasetspolicyuploadfinish" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/datasets/policy/uploadfinish
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apidatasetssubmissioncols" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/datasets/submissioncols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apidatasetsvalidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/datasets/validate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-apidatasetsviewcols" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /api/datasets/viewcols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-apifiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /api/files/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apifilesadminupdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/files/admin/update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apifilesadminview" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/files/admin/view
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apifilesadminviewcols" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/files/adminviewcols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apifilesall" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/files/all
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apifilescellxgene" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/files/cellxgene
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apifilesdisable" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/files/disable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apifilesdonwnload" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/files/donwnload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apifilesdownload" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/files/download
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apifilesfinishupload" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/files/finishupload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apifilesstartupload" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/files/startupload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-apifilessubmissioncols" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /api/files/submissioncols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apifilesviewcols" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/files/viewcols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      projects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-apiprojects" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/projects/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apiprojectsadminupdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/projects/admin/update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apiprojectsadminview" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/projects/admin/view
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apiprojectsadminviewcols" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/projects/adminviewcols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apiprojectsall" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/projects/all
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apiprojectscreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/projects/create
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-apiprojectssubmissioncols" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /api/projects/submissioncols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apiprojectsvalidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /api/projects/validate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-500-internal-server-error_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    <span class="md-ellipsis">
+      template
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-apitemplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /api/template/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-200-ok_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response 200 OK
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schemas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all_datasets_get_response" class="md-nav__link">
+    <span class="md-ellipsis">
+      All_DATASETS_GET_RESPONSE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common responses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parseerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParseError
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maskerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      MaskError
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiexception" class="md-nav__link">
+    <span class="md-ellipsis">
+      ApiException
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tags
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql-tables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Tables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automated-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automated Testing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sysadministrator Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sysadministrator Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sysadmin-guide/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sysadmin-guide/dependencies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dependencies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sysadmin-guide/deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Underlying Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Underlying Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/group-based-access-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Group-based Access Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/3-tier-data-organisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3-tier Data Organisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/distributed-file-storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Distributed File Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/docker-container-orchestration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Container Orchestration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    3TR-specific
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            3TR-specific
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3tr-specific/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3tr-specific/molecular-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Molecular Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3tr-specific/clinical-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clinical Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Filename Convention
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Filename Convention
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3tr-specific/clinical-data-nomenclature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clinical Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3tr-specific/molecular-data-nomenclature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Molecular Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="api-overview">API overview<a class="headerlink" href="#api-overview" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The OmicsDM API is using version 2 of the OpenAPI specification.
+For the purpose of this documentation, the swagger file is converted to version 3
+using <a href="https://editor-next.swagger.io" target="_blank">editor-next.swagger.io</a>.</p>
+</div>
+<!--
+This Markdown has been generated by essentials-openapi
+https://github.com/Neoteroi/essentials-openapi
+
+Most likely, it is not desirable to edit this file by hand!
+-->
+
+<h1 id="api-10">API 1.0<a class="headerlink" href="#api-10" title="Permanent link">&para;</a></h1>
+<h2 id="servers">Servers<a class="headerlink" href="#servers" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>//localhost/</td>
+</tr>
+</tbody>
+</table>
+<h2 id="analysis">analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h2>
+<h3 id="post-apianalysis">POST /api/analysis/<a class="headerlink" href="#post-apianalysis" title="Permanent link">&para;</a></h3>
+<p>create a new project in Opal via Jenkins</p>
+<h3 id="response-200-ok">Response 200 OK<a class="headerlink" href="#response-200-ok" title="Permanent link">&para;</a></h3>
+<h3 id="post-apianalysisabort">POST /api/analysis/abort<a class="headerlink" href="#post-apianalysisabort" title="Permanent link">&para;</a></h3>
+<p>abort an analysis</p>
+<h3 id="response-200-ok_1">Response 200 OK<a class="headerlink" href="#response-200-ok_1" title="Permanent link">&para;</a></h3>
+<h3 id="post-apianalysisdata">POST /api/analysis/data<a class="headerlink" href="#post-apianalysisdata" title="Permanent link">&para;</a></h3>
+<p>create a new project in Opal via Jenkins</p>
+<h3 id="response-200-ok_2">Response 200 OK<a class="headerlink" href="#response-200-ok_2" title="Permanent link">&para;</a></h3>
+<h3 id="post-apianalysisfiles">POST /api/analysis/files<a class="headerlink" href="#post-apianalysisfiles" title="Permanent link">&para;</a></h3>
+<p>create a new project in Opal via Jenkins</p>
+<h3 id="response-200-ok_3">Response 200 OK<a class="headerlink" href="#response-200-ok_3" title="Permanent link">&para;</a></h3>
+<h3 id="post-apianalysisresults">POST /api/analysis/results<a class="headerlink" href="#post-apianalysisresults" title="Permanent link">&para;</a></h3>
+<p>create a new project in Opal via Jenkins</p>
+<h3 id="response-200-ok_4">Response 200 OK<a class="headerlink" href="#response-200-ok_4" title="Permanent link">&para;</a></h3>
+<h3 id="post-apianalysisrun">POST /api/analysis/run<a class="headerlink" href="#post-apianalysisrun" title="Permanent link">&para;</a></h3>
+<p>create a new project in Opal via Jenkins</p>
+<h3 id="response-200-ok_5">Response 200 OK<a class="headerlink" href="#response-200-ok_5" title="Permanent link">&para;</a></h3>
+<h3 id="post-apianalysisstart">POST /api/analysis/start<a class="headerlink" href="#post-apianalysisstart" title="Permanent link">&para;</a></h3>
+<p>Add a new analysis to the database</p>
+<h3 id="response-200-ok_6">Response 200 OK<a class="headerlink" href="#response-200-ok_6" title="Permanent link">&para;</a></h3>
+<h3 id="post-apianalysisstatus">POST /api/analysis/status<a class="headerlink" href="#post-apianalysisstatus" title="Permanent link">&para;</a></h3>
+<p>get analysis status</p>
+<h3 id="response-200-ok_7">Response 200 OK<a class="headerlink" href="#response-200-ok_7" title="Permanent link">&para;</a></h3>
+<h3 id="post-apianalysissubmissiondata">POST /api/analysis/submissiondata<a class="headerlink" href="#post-apianalysissubmissiondata" title="Permanent link">&para;</a></h3>
+<p>create a new project in Opal via Jenkins</p>
+<h3 id="response-200-ok_8">Response 200 OK<a class="headerlink" href="#response-200-ok_8" title="Permanent link">&para;</a></h3>
+<h3 id="post-apianalysistemplatequery">POST /api/analysis/template/query<a class="headerlink" href="#post-apianalysistemplatequery" title="Permanent link">&para;</a></h3>
+<p>create a new project in Opal via Jenkins</p>
+<h3 id="response-200-ok_9">Response 200 OK<a class="headerlink" href="#response-200-ok_9" title="Permanent link">&para;</a></h3>
+<h3 id="post-apianalysistemplatesave">POST /api/analysis/template/save<a class="headerlink" href="#post-apianalysistemplatesave" title="Permanent link">&para;</a></h3>
+<p>create a new project in Opal via Jenkins</p>
+<h3 id="response-200-ok_10">Response 200 OK<a class="headerlink" href="#response-200-ok_10" title="Permanent link">&para;</a></h3>
+<h3 id="post-apianalysistypes">POST /api/analysis/types<a class="headerlink" href="#post-apianalysistypes" title="Permanent link">&para;</a></h3>
+<p>get possible analysis types based on the files</p>
+<h3 id="response-200-ok_11">Response 200 OK<a class="headerlink" href="#response-200-ok_11" title="Permanent link">&para;</a></h3>
+<h3 id="get-apianalysisviewcols">GET /api/analysis/viewcols<a class="headerlink" href="#get-apianalysisviewcols" title="Permanent link">&para;</a></h3>
+<p>Get datasets view fields</p>
+<p><strong>Description</strong>
+Returns...</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_12">Response 200 OK<a class="headerlink" href="#response-200-ok_12" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error" title="Permanent link">&para;</a></h3>
+<h2 id="test">test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h2>
+<h3 id="get-apicurltest">GET /api/curltest<a class="headerlink" href="#get-apicurltest" title="Permanent link">&para;</a></h3>
+<p>To test curl access</p>
+<h3 id="response-200-ok_13">Response 200 OK<a class="headerlink" href="#response-200-ok_13" title="Permanent link">&para;</a></h3>
+<h3 id="get-apitokentest">GET /api/tokentest<a class="headerlink" href="#get-apitokentest" title="Permanent link">&para;</a></h3>
+<h3 id="response-200-ok_14">Response 200 OK<a class="headerlink" href="#response-200-ok_14" title="Permanent link">&para;</a></h3>
+<h2 id="datasets">datasets<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h2>
+<h3 id="put-apidatasets">PUT /api/datasets/<a class="headerlink" href="#put-apidatasets" title="Permanent link">&para;</a></h3>
+<p>update a Dataset of a certain userid</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_15">Response 200 OK<a class="headerlink" href="#response-200-ok_15" title="Permanent link">&para;</a></h3>
+<h3 id="post-apidatasetsadminupdate">POST /api/datasets/admin/update<a class="headerlink" href="#post-apidatasetsadminupdate" title="Permanent link">&para;</a></h3>
+<p>Update dataset(s)</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_16">Response 200 OK<a class="headerlink" href="#response-200-ok_16" title="Permanent link">&para;</a></h3>
+<h3 id="post-apidatasetsadminview">POST /api/datasets/admin/view<a class="headerlink" href="#post-apidatasetsadminview" title="Permanent link">&para;</a></h3>
+<p>Get all the dataset data</p>
+<h3 id="response-200-ok_17">Response 200 OK<a class="headerlink" href="#response-200-ok_17" title="Permanent link">&para;</a></h3>
+<h3 id="post-apidatasetsadminviewcols">POST /api/datasets/adminviewcols<a class="headerlink" href="#post-apidatasetsadminviewcols" title="Permanent link">&para;</a></h3>
+<p>Get datasets admin columns</p>
+<p><strong>Description</strong>
+Returns...</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_18">Response 200 OK<a class="headerlink" href="#response-200-ok_18" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_1">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_1" title="Permanent link">&para;</a></h3>
+<h3 id="post-apidatasetsall">POST /api/datasets/all<a class="headerlink" href="#post-apidatasetsall" title="Permanent link">&para;</a></h3>
+<p>Get all the datasets data by keycloak group</p>
+<p><strong>Description</strong>
+Returns...</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Request body</strong></p>
+<p><strong>application/json</strong></p>
+<p><div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;pageSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;sorted&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;filtered&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<em>This example has been generated automatically from the schema and it is not
+accurate. Refer to the schema for more information.</em></p>
+<p><strong>Schema of the request body</strong></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="nt">&quot;pageSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Number of datasets per page&quot;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Page number&quot;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nt">&quot;sorted&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sorted by&quot;</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="nt">&quot;filtered&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filtered by&quot;</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="response-200-ok_19">Response 200 OK<a class="headerlink" href="#response-200-ok_19" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_2">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_2" title="Permanent link">&para;</a></h3>
+<h3 id="post-apidatasetsclinicaluploadfinish">POST /api/datasets/clinical/uploadfinish<a class="headerlink" href="#post-apidatasetsclinicaluploadfinish" title="Permanent link">&para;</a></h3>
+<p>create a presigned url for the clinical data upload</p>
+<p><strong>Description</strong>
+and store it in the database</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_20">Response 200 OK<a class="headerlink" href="#response-200-ok_20" title="Permanent link">&para;</a></h3>
+<h3 id="post-apidatasetscreate">POST /api/datasets/create<a class="headerlink" href="#post-apidatasetscreate" title="Permanent link">&para;</a></h3>
+<p><strong>Description</strong>
+Returns...</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_21">Response 200 OK<a class="headerlink" href="#response-200-ok_21" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_3">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_3" title="Permanent link">&para;</a></h3>
+<h3 id="post-apidatasetslist">POST /api/datasets/list<a class="headerlink" href="#post-apidatasetslist" title="Permanent link">&para;</a></h3>
+<p>Get all datasets by keycloak group and filtered by project_id</p>
+<p><strong>Description</strong>
+Returns list of all dataset IDs of the user's kc group;
+            can be filtered by dataset id</p>
+<p>(additionally it can be filtered by the dataset_id)</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_22">Response 200 OK<a class="headerlink" href="#response-200-ok_22" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_4">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_4" title="Permanent link">&para;</a></h3>
+<h3 id="post-apidatasetspolicyuploadfinish">POST /api/datasets/policy/uploadfinish<a class="headerlink" href="#post-apidatasetspolicyuploadfinish" title="Permanent link">&para;</a></h3>
+<p>create a presigned url for the dataset policy upload</p>
+<p><strong>Description</strong>
+and store it in the database</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_23">Response 200 OK<a class="headerlink" href="#response-200-ok_23" title="Permanent link">&para;</a></h3>
+<h3 id="post-apidatasetssubmissioncols">POST /api/datasets/submissioncols<a class="headerlink" href="#post-apidatasetssubmissioncols" title="Permanent link">&para;</a></h3>
+<p>Get the columnn specification for the dataset submission</p>
+<p><strong>Description</strong>
+Modify the columns for dataset submission</p>
+<p>from the project table</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_24">Response 200 OK<a class="headerlink" href="#response-200-ok_24" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_5">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_5" title="Permanent link">&para;</a></h3>
+<h3 id="post-apidatasetsvalidate">POST /api/datasets/validate<a class="headerlink" href="#post-apidatasetsvalidate" title="Permanent link">&para;</a></h3>
+<p><strong>Description</strong>
+Returns...</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_25">Response 200 OK<a class="headerlink" href="#response-200-ok_25" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_6">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_6" title="Permanent link">&para;</a></h3>
+<h3 id="get-apidatasetsviewcols">GET /api/datasets/viewcols<a class="headerlink" href="#get-apidatasetsviewcols" title="Permanent link">&para;</a></h3>
+<p>Get datasets view fields</p>
+<p><strong>Description</strong>
+Returns...</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_26">Response 200 OK<a class="headerlink" href="#response-200-ok_26" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_7">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_7" title="Permanent link">&para;</a></h3>
+<h2 id="files">files<a class="headerlink" href="#files" title="Permanent link">&para;</a></h2>
+<h3 id="get-apifiles">GET /api/files/<a class="headerlink" href="#get-apifiles" title="Permanent link">&para;</a></h3>
+<p>sign request</p>
+<p><strong>Description</strong>
+<a href="https://github.com/TTLabs/EvaporateJS/blob/master/example/signing_example.py">github.com/TTLabs/EvaporateJS/blob/master/example/signing_example.py</a></p>
+<h3 id="response-200-ok_27">Response 200 OK<a class="headerlink" href="#response-200-ok_27" title="Permanent link">&para;</a></h3>
+<h3 id="post-apifilesadminupdate">POST /api/files/admin/update<a class="headerlink" href="#post-apifilesadminupdate" title="Permanent link">&para;</a></h3>
+<p>Update file(s)</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_28">Response 200 OK<a class="headerlink" href="#response-200-ok_28" title="Permanent link">&para;</a></h3>
+<h3 id="post-apifilesadminview">POST /api/files/admin/view<a class="headerlink" href="#post-apifilesadminview" title="Permanent link">&para;</a></h3>
+<p>Get all the file data</p>
+<h3 id="response-200-ok_29">Response 200 OK<a class="headerlink" href="#response-200-ok_29" title="Permanent link">&para;</a></h3>
+<h3 id="post-apifilesadminviewcols">POST /api/files/adminviewcols<a class="headerlink" href="#post-apifilesadminviewcols" title="Permanent link">&para;</a></h3>
+<p>Get datasets view fields</p>
+<p><strong>Description</strong>
+Returns...</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_30">Response 200 OK<a class="headerlink" href="#response-200-ok_30" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_8">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_8" title="Permanent link">&para;</a></h3>
+<h3 id="post-apifilesall">POST /api/files/all<a class="headerlink" href="#post-apifilesall" title="Permanent link">&para;</a></h3>
+<h3 id="response-200-ok_31">Response 200 OK<a class="headerlink" href="#response-200-ok_31" title="Permanent link">&para;</a></h3>
+<h3 id="post-apifilescellxgene">POST /api/files/cellxgene<a class="headerlink" href="#post-apifilescellxgene" title="Permanent link">&para;</a></h3>
+<h3 id="response-200-ok_32">Response 200 OK<a class="headerlink" href="#response-200-ok_32" title="Permanent link">&para;</a></h3>
+<h3 id="post-apifilesdisable">POST /api/files/disable<a class="headerlink" href="#post-apifilesdisable" title="Permanent link">&para;</a></h3>
+<h3 id="response-200-ok_33">Response 200 OK<a class="headerlink" href="#response-200-ok_33" title="Permanent link">&para;</a></h3>
+<h3 id="post-apifilesdonwnload">POST /api/files/donwnload<a class="headerlink" href="#post-apifilesdonwnload" title="Permanent link">&para;</a></h3>
+<h3 id="response-200-ok_34">Response 200 OK<a class="headerlink" href="#response-200-ok_34" title="Permanent link">&para;</a></h3>
+<h3 id="post-apifilesdownload">POST /api/files/download<a class="headerlink" href="#post-apifilesdownload" title="Permanent link">&para;</a></h3>
+<h3 id="response-200-ok_35">Response 200 OK<a class="headerlink" href="#response-200-ok_35" title="Permanent link">&para;</a></h3>
+<h3 id="post-apifilesfinishupload">POST /api/files/finishupload<a class="headerlink" href="#post-apifilesfinishupload" title="Permanent link">&para;</a></h3>
+<h3 id="response-200-ok_36">Response 200 OK<a class="headerlink" href="#response-200-ok_36" title="Permanent link">&para;</a></h3>
+<h3 id="post-apifilesstartupload">POST /api/files/startupload<a class="headerlink" href="#post-apifilesstartupload" title="Permanent link">&para;</a></h3>
+<h3 id="response-200-ok_37">Response 200 OK<a class="headerlink" href="#response-200-ok_37" title="Permanent link">&para;</a></h3>
+<h3 id="get-apifilessubmissioncols">GET /api/files/submissioncols<a class="headerlink" href="#get-apifilessubmissioncols" title="Permanent link">&para;</a></h3>
+<p>Get file submission fields</p>
+<p><strong>Description</strong>
+Returns...</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_38">Response 200 OK<a class="headerlink" href="#response-200-ok_38" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_9">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_9" title="Permanent link">&para;</a></h3>
+<h3 id="post-apifilesviewcols">POST /api/files/viewcols<a class="headerlink" href="#post-apifilesviewcols" title="Permanent link">&para;</a></h3>
+<p>Get datasets view fields</p>
+<p><strong>Description</strong>
+Returns...</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_39">Response 200 OK<a class="headerlink" href="#response-200-ok_39" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_10">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_10" title="Permanent link">&para;</a></h3>
+<h2 id="projects">projects<a class="headerlink" href="#projects" title="Permanent link">&para;</a></h2>
+<h3 id="post-apiprojects">POST /api/projects/<a class="headerlink" href="#post-apiprojects" title="Permanent link">&para;</a></h3>
+<p>Update a project</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_40">Response 200 OK<a class="headerlink" href="#response-200-ok_40" title="Permanent link">&para;</a></h3>
+<h3 id="post-apiprojectsadminupdate">POST /api/projects/admin/update<a class="headerlink" href="#post-apiprojectsadminupdate" title="Permanent link">&para;</a></h3>
+<p>Update a project</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_41">Response 200 OK<a class="headerlink" href="#response-200-ok_41" title="Permanent link">&para;</a></h3>
+<h3 id="post-apiprojectsadminview">POST /api/projects/admin/view<a class="headerlink" href="#post-apiprojectsadminview" title="Permanent link">&para;</a></h3>
+<p>Get all the project data</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_42">Response 200 OK<a class="headerlink" href="#response-200-ok_42" title="Permanent link">&para;</a></h3>
+<h3 id="post-apiprojectsadminviewcols">POST /api/projects/adminviewcols<a class="headerlink" href="#post-apiprojectsadminviewcols" title="Permanent link">&para;</a></h3>
+<p>Get project submission fields</p>
+<p><strong>Description</strong>
+Returns...</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_43">Response 200 OK<a class="headerlink" href="#response-200-ok_43" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_11">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_11" title="Permanent link">&para;</a></h3>
+<h3 id="post-apiprojectsall">POST /api/projects/all<a class="headerlink" href="#post-apiprojectsall" title="Permanent link">&para;</a></h3>
+<p>Get all the projects data by keycloak group</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_44">Response 200 OK<a class="headerlink" href="#response-200-ok_44" title="Permanent link">&para;</a></h3>
+<h3 id="post-apiprojectscreate">POST /api/projects/create<a class="headerlink" href="#post-apiprojectscreate" title="Permanent link">&para;</a></h3>
+<p>Create a new project</p>
+<p><strong>Description</strong>
+Returns...</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_45">Response 200 OK<a class="headerlink" href="#response-200-ok_45" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_12">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_12" title="Permanent link">&para;</a></h3>
+<h3 id="get-apiprojectssubmissioncols">GET /api/projects/submissioncols<a class="headerlink" href="#get-apiprojectssubmissioncols" title="Permanent link">&para;</a></h3>
+<p>Get project submission fields</p>
+<p><strong>Description</strong>
+Returns...</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_46">Response 200 OK<a class="headerlink" href="#response-200-ok_46" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_13">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_13" title="Permanent link">&para;</a></h3>
+<h3 id="post-apiprojectsvalidate">POST /api/projects/validate<a class="headerlink" href="#post-apiprojectsvalidate" title="Permanent link">&para;</a></h3>
+<p><strong>Description</strong>
+Returns...</p>
+<p><strong>Input parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Default</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-200-ok_47">Response 200 OK<a class="headerlink" href="#response-200-ok_47" title="Permanent link">&para;</a></h3>
+<h3 id="response-500-internal-server-error_14">Response 500 Internal Server Error<a class="headerlink" href="#response-500-internal-server-error_14" title="Permanent link">&para;</a></h3>
+<h2 id="template">template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
+<h3 id="get-apitemplate">GET /api/template/<a class="headerlink" href="#get-apitemplate" title="Permanent link">&para;</a></h3>
+<p>get the template</p>
+<h3 id="response-200-ok_48">Response 200 OK<a class="headerlink" href="#response-200-ok_48" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="schemas">Schemas<a class="headerlink" href="#schemas" title="Permanent link">&para;</a></h2>
+<h3 id="all_datasets_get_response">All_DATASETS_GET_RESPONSE<a class="headerlink" href="#all_datasets_get_response" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filtered</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>sorted</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-responses">Common responses<a class="headerlink" href="#common-responses" title="Permanent link">&para;</a></h2>
+<p>This section describes common responses that are reused across operations.</p>
+<h3 id="parseerror">ParseError<a class="headerlink" href="#parseerror" title="Permanent link">&para;</a></h3>
+<p>When a mask can't be parsed</p>
+<h3 id="maskerror">MaskError<a class="headerlink" href="#maskerror" title="Permanent link">&para;</a></h3>
+<p>When any error occurs on mask</p>
+<h3 id="apiexception">ApiException<a class="headerlink" href="#apiexception" title="Permanent link">&para;</a></h3>
+<p>Return custom JSON when APIException is raised</p>
+<h2 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>test</td>
+<td>test related operations</td>
+</tr>
+<tr>
+<td>template</td>
+<td>template related operations</td>
+</tr>
+<tr>
+<td>projects</td>
+<td>projects related operations</td>
+</tr>
+<tr>
+<td>datasets</td>
+<td>datasets related operations</td>
+</tr>
+<tr>
+<td>files</td>
+<td>files related operations</td>
+</tr>
+<tr>
+<td>analysis</td>
+<td>analysis related operations</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; Ivo C. Leist, CNAG
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/IvoLeist" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.select", "content.code.copy", "content.tabs.link", "content.tooltips", "search.highlight", "search.share", "navigation.tracking", "navigation.sections", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../../js/theme_overrides.js"></script>
+      
+        <script src="../../../js/refresh_on_toggle_dark_light.js"></script>
+      
+        <script src="../../../js/auto_expand_user_guide.js"></script>
+      
+        <script src="../../../js/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
