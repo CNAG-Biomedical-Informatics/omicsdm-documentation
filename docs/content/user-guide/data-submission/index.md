@@ -3,7 +3,7 @@
 Data submission in OmicsDM is a three-step process:
 
 - [Request project(s) creation](#prerequisite-request-projects): Project creation is done by the OmicsDM admin
-- [Create dataset(s)](#step-2-create-datasets): Here you create the "folder" for your files + attach the pheno-clinical data
+- [Create dataset(s)](#step-2-create-datasets): Here you create the "folder" for your files + attach the clinical data
 - [Upload file(s)](#step-3-upload-files): Here you can upload your molecular data files such as RNA-seq count matrices
 
 ## Prerequisite: Request project(s) 
@@ -31,10 +31,10 @@ fill it out and attach it to the email.
     - Handy when you want to ask for the creation of multiple projects
     - Makes the life more easy for the admin creating the project(s).
 
-## Create Datasets and Attach Pheno-Clinical Data
+## Create Datasets and Attach Clinical Data
 
-??? Info "Recommended nomenclature for the Pheno-Clinical data file"
-    Please see the following [link](../../3tr-specific/pheno-clinical-data-nomenclature.md).
+??? Info "Recommended nomenclature for the Clinical data file"
+    Please see the following [link](../../3tr-specific/clinical-data-nomenclature.md).
     
 When the project is created, you can start creating datasets (the "folder" for your files)
 
@@ -55,7 +55,7 @@ When the project is created, you can start creating datasets (the "folder" for y
     [dataset_template](
         https://github.com/CNAG-Biomedical-Informatics/omicsdm-documentation/blob/main/omicsdm_templates/project_template.tsv
      "Tip: Handy when you want to create multiple datasets").
-    2. Click on "Browse" in the "Clinical File" column to select the corresponding pheno-clinical information file to be uploaded
+    2. Click on "Browse" in the "Clinical File" column to select the corresponding clinical information file to be uploaded
     3. Optional: Click on "Browse" in the "Data Usage Policy File" column to upload a file containing specific data usage policy
     4. Click on "VALIDATE" to check if all mandatory fields are filled out
     5. Click on "SUBMIT" to create the dataset(s)

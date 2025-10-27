@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Author: Manuel Rueda (manuel.rueda@cnag.eu)
-# Date: Oct-17-2025
+# Date: Oct-27-2025
 # Version: 0.1
 #
 # Minimal filename validator for the 3TR clinical naming convention.
@@ -13,8 +13,8 @@ import sys
 PATTERN = re.compile(
     r'^[A-Z0-9]+_[A-Z0-9]+_[A-Za-z0-9-]+_'
     r'(?:REDCAP-(?:RAW|LABEL|DICT)|CSV-RAW|CDISC)_'
-    r'\d{8}_'
-    r'(?:PASS|FAIL|PARTIAL|NA)-[A-Z0-9]+'
+    r'(?:\d{8}|v\d+(?:\.\d+){0,2})'
+    r'(?:_(?:PASS|FAIL|PARTIAL|NA)-[A-Z0-9]+)?'
     r'(?:_CONV-(?:OMOP|PXF|BFF)(?:-[0-9]+(?:[._][0-9]+)*)?)?'
     r'\.(?:csv|json|txt|yaml)$'
 )

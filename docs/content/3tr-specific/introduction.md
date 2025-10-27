@@ -23,10 +23,10 @@ The in the data warehouse to be uploaded data can be divided into:
 
     [:octicons-arrow-right-24: Learn more](../molecular-data)
 
--   :fontawesome-solid-clipboard-user:{ .lg .middle } __Pheno-Clinical Data__
+-   :fontawesome-solid-clipboard-user:{ .lg .middle } __Clinical Data__
 
     ---
 
-    Pheno-clinical = Phenotypic + clinical data
+    Clinical data
 
-    [:octicons-arrow-right-24: Learn more](../pheno-clinical-data)
+    [:octicons-arrow-right-24: Learn more](../clinical-data)

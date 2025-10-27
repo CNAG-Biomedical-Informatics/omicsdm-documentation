@@ -14,11 +14,11 @@ OmicsDM was designed to store the following two data types:
     !!! Warning "3TR specific"
         Only submit processed data that is ready for analyses.
 
-  -   :fontawesome-solid-clipboard-user:{ .lg .middle } __Pheno-Clinical Data__
+  -   :fontawesome-solid-clipboard-user:{ .lg .middle } __Clinical Data__
 
     ---
 
-    Pheno-clinical (phenotypic + clinical) data is the data that describes the phenotype and clinical
+    Clinical data is the data that describes the phenotype and clinical
     information of the samples from which the omics data was generated.
     
     In the best scenario, this data comes in the form of 
@@ -47,11 +47,11 @@ using OmicsDM's [visualisation module](./functionalities-organized-in-modules.md
 !!! Info "3TR specific"
     The visualisation module is disabled in the 3TR instance of OmicsDM.
 
-## Pheno-Clinical Data Example
+## Clinical Data Example
 
-### Pheno-Clinical Information Exported from REDCap
+### Clinical Information Exported from REDCap
 
-In the [3TR project](https://www.3tr-imi.eu) most of the Pheno-clinical information is stored in [REDCap](https://www.project-redcap.org/){target="_blank"}, a widely adopted web application for building and managing online surveys and database.
+In the [3TR project](https://www.3tr-imi.eu) most of the clinical information is stored in [REDCap](https://www.project-redcap.org/){target="_blank"}, a widely adopted web application for building and managing online surveys and database.
 The information is then exported in the form of two CSV files. Click on each link to see an example of the content of the files:
 
 - [REDCap data export](https://github.com/CNAG-Biomedical-Informatics/convert-pheno/blob/main/t/redcap2bff/in/redcap_data.csv){target="_blank"}

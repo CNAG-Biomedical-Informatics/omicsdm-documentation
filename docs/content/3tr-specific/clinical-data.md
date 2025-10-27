@@ -1,5 +1,5 @@
 Since the molecular data cannot be interpreted without the context of the patient,
-it is crucial to also store the pheno-clinical (phenotypic + clinical) 
+it is crucial to also store the clinical data 
 information about the patients.
 
 !!! Trivia "Format of the already uploaded data"
