@@ -10,8 +10,7 @@ developed for the 3TR project (https://www.3tr-imi.eu).
 
 The source code for the server and client can be found in the following repositories:
 
-- https://github.com/CNAG-Biomedical-Informatics/omicsdm-server
-- https://github.com/CNAG-Biomedical-Informatics/omicsdm-client
+- https://github.com/CNAG-Biomedical-Informatics/OmicsDM
 
 ## Context
 
